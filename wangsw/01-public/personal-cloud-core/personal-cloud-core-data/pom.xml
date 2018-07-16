@@ -2,20 +2,14 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>personal-cloud-core</artifactId>
+        <groupId>com.personal.cloud</groupId>
+        <version>1.0.0</version>
+    </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.personal.cloud</groupId>
-    <artifactId>personal-cloud-core</artifactId>
-    <version>1.0.0</version>
-    <modules>
-        <module>personal-cloud-core-data</module>
-    </modules>
-    <packaging>pom</packaging>
-
-    <name>personal-cloud-core</name>
-    <url>http://47.98.116.20:8761/</url>
-
-
+    <artifactId>personal-cloud-core-data</artifactId>
 
 
 </project>

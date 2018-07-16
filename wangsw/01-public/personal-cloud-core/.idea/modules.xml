@@ -3,6 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/personal-cloud-core.iml" filepath="$PROJECT_DIR$/personal-cloud-core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/personal-cloud-core-data/personal-cloud-core-data.iml" filepath="$PROJECT_DIR$/personal-cloud-core-data/personal-cloud-core-data.iml" />
+      <module fileurl="file://$PROJECT_DIR$/personal-cloud-parent/personal-cloud-parent.iml" filepath="$PROJECT_DIR$/personal-cloud-parent/personal-cloud-parent.iml" />
     </modules>
   </component>
 </project>

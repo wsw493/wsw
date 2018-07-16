@@ -6,11 +6,13 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="personal-cloud-core" />
+        <module name="personal-cloud-core-data" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="personal-cloud-core" target="1.5" />
+      <module name="personal-cloud-core-data" target="1.5" />
+      <module name="personal-cloud-parent" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
