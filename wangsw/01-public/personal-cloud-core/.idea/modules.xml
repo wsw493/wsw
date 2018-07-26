@@ -3,7 +3,11 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/personal-cloud-core.iml" filepath="$PROJECT_DIR$/personal-cloud-core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/personal-cloud-core-commom/personal-cloud-core-commom.iml" filepath="$PROJECT_DIR$/personal-cloud-core-commom/personal-cloud-core-commom.iml" />
+      <module fileurl="file://$PROJECT_DIR$/personal-cloud-core-commom/personal-cloud-core-commom-utils/personal-cloud-core-commom-utils.iml" filepath="$PROJECT_DIR$/personal-cloud-core-commom/personal-cloud-core-commom-utils/personal-cloud-core-commom-utils.iml" />
       <module fileurl="file://$PROJECT_DIR$/personal-cloud-core-data/personal-cloud-core-data.iml" filepath="$PROJECT_DIR$/personal-cloud-core-data/personal-cloud-core-data.iml" />
+      <module fileurl="file://$PROJECT_DIR$/personal-cloud-core-data/personal-cloud-core-data-common/personal-cloud-core-data-common.iml" filepath="$PROJECT_DIR$/personal-cloud-core-data/personal-cloud-core-data-common/personal-cloud-core-data-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/personal-cloud-core-data/personal-cloud-core-data-hibernate/personal-cloud-core-data-hibernate.iml" filepath="$PROJECT_DIR$/personal-cloud-core-data/personal-cloud-core-data-hibernate/personal-cloud-core-data-hibernate.iml" />
       <module fileurl="file://$PROJECT_DIR$/personal-cloud-parent/personal-cloud-parent.iml" filepath="$PROJECT_DIR$/personal-cloud-parent/personal-cloud-parent.iml" />
     </modules>
   </component>

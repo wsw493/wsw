@@ -7,15 +7,15 @@
     <groupId>com.personal.cloud</groupId>
     <artifactId>personal-cloud-core</artifactId>
     <version>1.0.0</version>
-    <modules>
-        <module>personal-cloud-core-data</module>
-    </modules>
     <packaging>pom</packaging>
 
     <name>personal-cloud-core</name>
     <url>http://47.98.116.20:8761/</url>
 
-
+    <modules>
+        <module>personal-cloud-core-data</module>
+        <module>personal-cloud-core-commom</module>
+    </modules>
 
 
 </project>
