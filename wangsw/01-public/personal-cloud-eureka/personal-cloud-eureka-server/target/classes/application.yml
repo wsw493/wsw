@@ -1,0 +1,20 @@
+########服务端口定义############
+spring:
+  profiles:
+    active: dev
+  application:
+    name: personal-cloud-eureka-server
+########服务端口定义##############
+  tomcat:
+    uri-encoding: utf-8
+########日志################
+logging:
+  config: classpath:logback-spring.xml
+########自己不注册自己############
+eureka:
+  client:
+    fetch-registry: false
+    register-with-eureka: false
+  server:
+    enable-self-preservation: true
+

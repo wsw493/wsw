@@ -1,0 +1,15 @@
+########服务端口定义############
+server:
+  port: 10001
+########eureka配置############
+eureka:
+  instance:
+    hostname: eureka-second
+    non-secure-port: ${server.port}
+    prefer-ip-address: true
+    leaseRenewalIntervalInSeconds: 10
+    instance-id: ${eureka.instance.hostname}:${spring.cloud.client.ipAddress}:${server.port}
+  client:
+    serviceUrl:
+      defaultZone: http://eureka-first:10000/eureka/
+
