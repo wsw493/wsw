@@ -7,13 +7,14 @@
     <groupId>com.personal.cloud</groupId>
     <artifactId>personal-cloud-core-data</artifactId>
     <version>1.0.0</version>
-    <modules>
-        <module>personal-cloud-core-data-hibernate</module>
-        <module>personal-cloud-core-data-common</module>
-    </modules>
     <packaging>pom</packaging>
 
-    <name>personal-cloud-parent</name>
+    <name>personal-cloud-core-data</name>
     <url>http://www.example.com</url>
+
+    <modules>
+        <module>personal-cloud-core-data-common</module>
+        <module>personal-cloud-core-data-hibernate</module>
+    </modules>
 
 </project>

@@ -5,11 +5,14 @@
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/personal-cloud-parent/pom.xml" />
+        <option value="$PROJECT_DIR$/personal-cloud-core-data/pom.xml" />
+        <option value="$PROJECT_DIR$/personal-cloud-core-commom/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">
       <set>
-        <option value="$PROJECT_DIR$/personal-cloud-core-data/pom.xml" />
+        <option value="$PROJECT_DIR$/personal-cloud-core-data/personal-cloud-core-data-common/pom.xml" />
+        <option value="$PROJECT_DIR$/personal-cloud-core-data/personal-cloud-core-data-hibernate/pom.xml" />
       </set>
     </option>
   </component>
