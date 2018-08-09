@@ -1,0 +1,14 @@
+########服务端口定义############
+spring:
+  profiles:
+    active: dev
+  application:
+    name: personal-cloud-redis-server
+########服务端口定义##############
+  tomcat:
+    uri-encoding: utf-8
+########日志################
+logging:
+  config: classpath:logback-spring.xml
+
+

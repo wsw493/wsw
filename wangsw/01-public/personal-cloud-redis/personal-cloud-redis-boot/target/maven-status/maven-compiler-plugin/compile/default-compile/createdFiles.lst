@@ -1,0 +1,3 @@
+com\personal\cloud\redis\controller\CloudRedisController.class
+com\personal\cloud\redis\RedisServerApplication.class
+com\personal\cloud\redis\config\Swagger2Config.class

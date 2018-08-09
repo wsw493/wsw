@@ -18,6 +18,11 @@
             <artifactId>personal-cloud-redis-domain</artifactId>
             <version>${personal-cloud-redis-version}</version>
         </dependency>
+        <dependency>
+            <groupId>com.personal.cloud</groupId>
+            <artifactId>personal-cloud-redis-support</artifactId>
+            <version>${personal-cloud-redis-version}</version>
+        </dependency>
     </dependencies>
 
 </project>

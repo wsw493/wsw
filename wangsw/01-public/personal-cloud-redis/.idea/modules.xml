@@ -7,6 +7,7 @@
       <module fileurl="file://$PROJECT_DIR$/personal-cloud-redis-dao/personal-cloud-redis-dao.iml" filepath="$PROJECT_DIR$/personal-cloud-redis-dao/personal-cloud-redis-dao.iml" />
       <module fileurl="file://$PROJECT_DIR$/personal-cloud-redis-domain/personal-cloud-redis-domain.iml" filepath="$PROJECT_DIR$/personal-cloud-redis-domain/personal-cloud-redis-domain.iml" />
       <module fileurl="file://$PROJECT_DIR$/personal-cloud-redis-service/personal-cloud-redis-service.iml" filepath="$PROJECT_DIR$/personal-cloud-redis-service/personal-cloud-redis-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/personal-cloud-redis-support/personal-cloud-redis-support.iml" filepath="$PROJECT_DIR$/personal-cloud-redis-support/personal-cloud-redis-support.iml" />
     </modules>
   </component>
 </project>

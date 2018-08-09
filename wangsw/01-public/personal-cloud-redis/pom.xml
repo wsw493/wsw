@@ -22,6 +22,7 @@
 
     <modules>
         <module>personal-cloud-redis-domain</module>
+        <module>personal-cloud-redis-support</module>
         <module>personal-cloud-redis-dao</module>
         <module>personal-cloud-redis-service</module>
         <module>personal-cloud-redis-boot</module>
