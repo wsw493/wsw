@@ -33,6 +33,9 @@
 
         <swagger.version>2.8.0</swagger.version>
 
+        <!-- 日志 -->
+        <logstash.version>4.11</logstash.version>
+
         <jdk.version>1.8</jdk.version>
         <slf4j.version>1.7.25</slf4j.version>
         <log4j.version>1.2.17</log4j.version>
@@ -89,6 +92,12 @@
                 <version>${springboot.version}</version>
             </dependency>
 
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-data-mongodb</artifactId>
+                <version>${springboot.version}</version>
+            </dependency>
+
             <!-- https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-starter-eureka-server -->
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
@@ -123,7 +132,11 @@
                 <artifactId>log4jdbc-log4j2-jdbc4.1</artifactId>
                 <version>${log4jdbc.version}</version>
             </dependency>
-
+            <dependency>
+                <groupId>net.logstash.logback</groupId>
+                <artifactId>logstash-logback-encoder</artifactId>
+                <version>${logstash.version}</version>
+            </dependency>
             <dependency>
                 <groupId>org.apache.commons</groupId>
                 <artifactId>commons-lang3</artifactId>

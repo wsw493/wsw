@@ -52,4 +52,10 @@
         </profile>
     </profiles>
 
+    <dependencyManagement>
+        <dependencies>
+
+        </dependencies>
+    </dependencyManagement>
+
 </project>

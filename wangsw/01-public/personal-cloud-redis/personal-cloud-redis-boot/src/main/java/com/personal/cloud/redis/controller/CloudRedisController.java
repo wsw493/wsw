@@ -48,4 +48,61 @@ public class CloudRedisController {
         }
     }
 
+    @ApiOperation(value = "redis根据key获取值", notes = "4")
+    @ApiImplicitParams({
+            @ApiImplicitParam(name = "key", value = "键", required = true, paramType = "query", dataType = "String"),
+    })
+    @RequestMapping(value = "/getRedisString", method = RequestMethod.POST)
+    public RestResultDto getRedisString(String key) {
+        RestResultDto result = new RestResultDto();
+        result.setResult(RestResultDto.RESULT_SUCC);
+        try {
+            String value = cloudRedisService.getString(key);
+            return RestResultDto.newSuccess(value);
+        } catch (Exception e) {
+            result.setResult(RestResultDto.RESULT_FAIL);
+            result.setException(e.getMessage());
+            return RestResultDto.newFalid("根据key 查询name redis", e.getMessage());
+        }
+    }
+
+    @ApiOperation(value = "redis新增键值对", notes = "1")
+    @ApiImplicitParams({
+            @ApiImplicitParam(name = "key", value = "键", required = true, paramType = "query", dataType = "String"),
+            @ApiImplicitParam(name = "value", value = "值", required = true, paramType = "query", dataType = "String"),
+    })
+    @RequestMapping(value = "/addRedis", method = RequestMethod.POST)
+    public RestResultDto addRedis(HttpServletRequest request,String key , String value) {
+        RestResultDto result = new RestResultDto();
+        result.setResult(RestResultDto.RESULT_SUCC);
+        try {
+            cloudRedisService.set(key,value);
+            return RestResultDto.newSuccess();
+        } catch (Exception e) {
+            result.setResult(RestResultDto.RESULT_FAIL);
+            result.setException(e.getMessage());
+            return RestResultDto.newFalid("新增数据到redis", e.getMessage());
+        }
+    }
+
+
+
+    @ApiOperation(value = "redis根据key获取值-redis", notes = "4")
+    @ApiImplicitParams({
+            @ApiImplicitParam(name = "key", value = "键", required = true, paramType = "query", dataType = "String"),
+    })
+    @RequestMapping(value = "/getRedis", method = RequestMethod.POST)
+    public RestResultDto getRedis(String key) {
+        RestResultDto result = new RestResultDto();
+        result.setResult(RestResultDto.RESULT_SUCC);
+        try {
+            Object value = cloudRedisService.get(key);
+            return RestResultDto.newSuccess(value);
+        } catch (Exception e) {
+            result.setResult(RestResultDto.RESULT_FAIL);
+            result.setException(e.getMessage());
+            return RestResultDto.newFalid("根据key 查询name redis", e.getMessage());
+        }
+    }
+
 }

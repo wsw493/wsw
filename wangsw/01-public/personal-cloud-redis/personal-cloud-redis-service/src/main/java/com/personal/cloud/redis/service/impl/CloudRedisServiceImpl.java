@@ -29,7 +29,8 @@ public class CloudRedisServiceImpl implements ICloudRedisService {
 
     @Override
     public Object get(String key) {
-        return null;
+        redisTemplate.opsForValue().get(key);
+        return redisTemplate.opsForValue().get(key);
     }
 
     @Override

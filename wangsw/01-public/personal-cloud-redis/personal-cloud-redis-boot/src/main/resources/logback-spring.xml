@@ -1,74 +1,60 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE logback>
 <configuration>
+    <!--引入默认配置 -->
+    <logger name="org.springframework.web" level = "INFO"/>
 
-    <logger name="jdbc.sqlonly" level="WARN" />
-    <logger name="jdbc.sqltiming" level="INFO" />
-    <logger name="jdbc.audit" level="WARN" />
-    <logger name="jdbc.resultset" level="WARN" />
-    <logger name="jdbc.resultsettable" level="WARN" />
-    <logger name="jdbc.connection" level="WARN" />
-    <logger name="org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter"
-            level="DEBUG" />
-    <!--spring profile-->
-    <!-- level 级别：TRACE, DEBUG, INFO, WARN, ERROR, ALL, OFF-->
-    <!-- 测试环境+开发环境. 多个使用逗号隔开. -->
-    <springProfile name="test,dev">
-        <logger name="org.springframework.web" level="INFO" />
-        <logger name="com.personal" level="INFO" />
+    <!--属性导入 -->
+    <springProperty scope="context" name="APP_NAME" source="spring.application.name" defaultValue="UNKNOWN_APP" />
 
-        <appender name="console" class="ch.qos.logback.core.ConsoleAppender">
-            <encoder>
-                <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger -
-                    %msg%n</pattern>
-            </encoder>
-        </appender>
+    <appender name="console" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+            <!--格式化输出：%d表示日期，%thread表示线程名，%-5level：级别从左显示5个字符宽度%msg：日志消息，%n是换行符-->
+            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{50} - %msg%n</pattern>
+        </encoder>
+    </appender>
 
-        <appender name="businessLogFile"
-                  class="ch.qos.logback.core.rolling.RollingFileAppender">
-            <!-- 按每小时滚动文件，如果一个小时内达到10M也会滚动文件, 滚动文件将会压缩成zip格式 -->
-            <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-                <fileNamePattern>logs/business-%d{yyyy-MM-dd_HH}.%i.zip</fileNamePattern>
-                <timeBasedFileNamingAndTriggeringPolicy
-                        class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
-                    <maxFileSize>10MB</maxFileSize>
-                </timeBasedFileNamingAndTriggeringPolicy>
-            </rollingPolicy>
-            <!-- 独立的pattern -->
-            <encoder>
-                <pattern>%d{HH:mm:ss.SSS},%msg%n</pattern>
-            </encoder>
-        </appender>
+    <!--文件 appender 定义 -->
+    <appender name="logFile" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>logs/${APP_NAME:-.}.log</file>
+        <!-- 按每小时滚动文件，如果一个小时内达到10M也会滚动文件, 滚动文件将会压缩成zip格式 -->
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>logs/${APP_NAME:-.}-%d{yyyy-MM-dd_HH}.%i.zip</fileNamePattern>
+            <timeBasedFileNamingAndTriggeringPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+                <maxFileSize>50MB</maxFileSize>
+            </timeBasedFileNamingAndTriggeringPolicy>
+            <!--日志文件保留天数-->
+            <maxHistory>3</maxHistory>
+        </rollingPolicy>
+        <!-- 独立的pattern -->
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger - %msg%n</pattern>
+            <!-- 此处设置字符集 -->
+            <charset>UTF-8</charset>
+        </encoder>
+    </appender>
+
+    <!--spring profile -->
+    <!-- level 级别：TRACE, DEBUG, INFO, WARN, ERROR, ALL, OFF -->
+    <!--本地开发环境 -->
+    <springProfile name="default,dev,test">
+        <root level="INFO">
+            <appender-ref ref="console" />
+            <appender-ref ref="logFile" />
+        </root>
+        <logger name="com.vortex" level="DEBUG" />
+        <logger name="dao" level="DEBUG" />
+        <logger name="org.hibernate.type.descriptor.sql.BasicBinder" level="TRACE" />
+        <logger name="org.hibernate.SQL" level="DEBUG" />
+        <logger name="org.springframework.jdbc.core" level="DEBUG" />
     </springProfile>
 
-
-    <!-- 生产环境. -->
-    <springProfile name="prod">
-        <logger name="org.springframework.web" level="ERROR" />
-        <logger name="com.personal" level="ERROR" />
-
-        <appender name="console" class="ch.qos.logback.core.ConsoleAppender">
-            <encoder>
-                <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger -
-                    %msg%n</pattern>
-            </encoder>
-        </appender>
-
-        <appender name="businessLogFile"
-                  class="ch.qos.logback.core.rolling.RollingFileAppender">
-            <!-- 按每小时滚动文件，如果一个小时内达到10M也会滚动文件, 滚动文件将会压缩成zip格式 -->
-            <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-                <fileNamePattern>logs/business-%d{yyyy-MM-dd_HH}.%i.zip</fileNamePattern>
-                <timeBasedFileNamingAndTriggeringPolicy
-                        class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
-                    <maxFileSize>10MB</maxFileSize>
-                </timeBasedFileNamingAndTriggeringPolicy>
-            </rollingPolicy>
-            <!-- 独立的pattern -->
-            <encoder>
-                <pattern>%d{HH:mm:ss.SSS},%msg%n</pattern>
-            </encoder>
-        </appender>
+    <!-- 生产环境、docker 环境 -->
+    <springProfile name="prod,docker">
+        <root level="ERROR">
+            <appender-ref ref="console" />
+            <appender-ref ref="logFile" />
+        </root>
+        <logger name="com.vortex" level="DEBUG" />
     </springProfile>
 
 </configuration>

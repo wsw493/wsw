@@ -16,7 +16,6 @@ public interface ICloudRedisService {
      */
     public boolean set(final String key, Object value);
 
-
     /**
      * 读取缓存
      * @param key
