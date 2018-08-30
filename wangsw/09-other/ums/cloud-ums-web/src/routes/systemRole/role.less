@@ -1,0 +1,150 @@
+.main{
+    height: 100%;
+    width: 100%;
+    position: relative;
+    .leftTree {
+        display: inline-block;
+        vertical-align: top;
+        width: 20%;
+        height: 100%;
+        overflow-y: auto;
+        border-right: 1px solid #ddd;
+    }
+    .rigthCont {
+        display: inline-block;
+        vertical-align: top;
+        width: 79%;
+        height: 100%;
+        position: relative;
+    }
+}
+.table{
+    position: absolute;
+    top:90px;
+    bottom: 0;
+    width: 100%;
+}
+.bt_bar{
+    position: absolute;
+    top:46px;
+    padding: 10px;
+    & > button {
+        margin: 0 8px;
+    }
+}
+.modalmain {
+    :global{
+        .ant-modal-body{
+            position: relative;
+        }
+    }
+}
+.search_bar,.search_bar2{
+    font-size:12px;
+    padding: 10px 50px;
+    border-bottom:1px solid #cccccc;
+    /*box-shadow:rgb(153, 153, 153) 0px 1px 10px -3px;*/
+}
+.search_bar Input{
+    width:15%;
+    margin-right:2%;
+}
+.search_bar Button{
+    float: right;
+    margin:0 5px;
+}
+.button{
+    padding: 5px 10px;
+}
+.TreePanel {
+    height: 565px;
+    width: 100%;
+    padding: 7px;
+    box-sizing: border-box;
+    white-space: nowrap;
+    .left {
+        display: inline-block;
+        vertical-align: top;
+        width: 20%;
+        border: 1px solid #bbbbbb;
+        height: 100%;
+        border-radius: 4px;
+        overflow: hidden;
+    }
+    .title {
+        height: 30px;
+        line-height: 30px;
+        background-color: #f5f5f5;
+        border-bottom: 1px solid #bbb;
+        font-size: 15px;
+        font-weight: bold;
+        padding: 0 5px;
+    }
+    .listContent {
+        padding: 5px;
+        box-sizing: border-box;
+        overflow: auto;
+    }
+    .listContent .item {
+        height: 30px;
+        line-height: 30px;
+        cursor: pointer;
+    }
+    .listContent .item:hover {
+        background-color: #f5f5f5;
+    }
+    .listContent .item label {
+        cursor: pointer;
+    }
+    .right {
+        display: inline-block;
+        vertical-align: top;
+        width: 79%;
+        height: 100%;
+        margin-left: 10px;
+        border: 1px solid #bbb;
+        border-radius: 4px;
+        overflow: hidden;
+        position: relative;
+    }
+    .treeContent {
+        height: 100%;
+        //padding-bottom: 32px;
+        box-sizing: border-box;
+        margin-top: 5px; 
+        padding-left: 0px; 
+        padding-right: 0;
+        overflow: auto;
+        padding-bottom: 35px;
+    }
+    .bottom {
+        position: absolute;
+        bottom:0;
+        left: 0;
+        right: 0;
+        height: 30px;
+        background-color: #f5f5f5;
+        border-top: 1px solid #bbb;
+        line-height: 30px;
+        padding-left: 10px;
+        box-sizing: border-box;
+    }
+    .bottom span {
+        font-size: 12px;
+        color: #999;
+        margin-right: 2px;
+        padding: 4px 6px;
+        cursor: pointer;
+    }
+    .menuList {
+        display: inline-block;
+        vertical-align: top;
+        white-space: normal;
+    }
+    .menuList li {
+        display: inline-block;
+    }
+    .menuList li .noline_docu,.menuList li .ico_docu {
+        display: none !important;
+    }
+}

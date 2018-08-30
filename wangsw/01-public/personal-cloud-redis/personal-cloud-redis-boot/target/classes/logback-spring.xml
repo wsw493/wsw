@@ -23,7 +23,7 @@
                 <maxFileSize>50MB</maxFileSize>
             </timeBasedFileNamingAndTriggeringPolicy>
             <!--日志文件保留天数-->
-            <maxHistory>3</maxHistory>
+            <maxHistory>1</maxHistory>
         </rollingPolicy>
         <!-- 独立的pattern -->
         <encoder>
@@ -54,7 +54,7 @@
             <appender-ref ref="console" />
             <appender-ref ref="logFile" />
         </root>
-        <logger name="com.vortex" level="DEBUG" />
+        <logger name="com.vortex" level="ERROR" />
     </springProfile>
 
 </configuration>

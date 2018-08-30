@@ -1,0 +1,24 @@
+.error{
+    display: inline-block;
+    input{
+        border-color: red;
+    }
+    &:after{
+        content:attr(data-errorMsg);
+        color: red;
+        display: block;
+        font-size: 10px;
+    }
+    div:global(.ant-select-selection){
+        border: 1px solid red;
+    }
+}
+.normal{
+    display: inline-block;
+    &:after{
+        content:'.';
+        visibility: hidden;
+        display: block;
+        font-size: 10px;
+    }
+}

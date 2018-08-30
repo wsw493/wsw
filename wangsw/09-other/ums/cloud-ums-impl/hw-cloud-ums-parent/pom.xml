@@ -1,0 +1,230 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>com.vortex.cloud</groupId>
+		<artifactId>hw-cloud-parent</artifactId>
+		<version>1.0.0</version>
+	</parent>
+	<artifactId>hw-cloud-ums-parent</artifactId>
+	<packaging>pom</packaging>
+
+	<properties>
+		<!-- Plugin的属性定义 -->
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<jdk.version>1.8</jdk.version>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<java.version>1.8</java.version>
+		<spring-boot.version>1.4.3.RELEASE</spring-boot.version>
+		<!-- vortex -->
+		<hw-cloud-tts-api.version>1.0.0</hw-cloud-tts-api.version>
+		<hw-cloud-tts-job.version>1.0.0</hw-cloud-tts-job.version>
+		<hw-cloud-tts-mq.version>1.0.0</hw-cloud-tts-mq.version>
+		<hw-cloud-tts-sdk.version>1.0.0</hw-cloud-tts-sdk.version>
+		<hw-cloud-tts-client.version>1.0.0</hw-cloud-tts-client.version>
+		<hw-cloud-vfs-common-kafka.version>1.0.0</hw-cloud-vfs-common-kafka.version>
+		<hw-cloud-vfs-common-utils.version>1.0.0</hw-cloud-vfs-common-utils.version>
+		<hw-cloud-vfs-data-common.version>1.0.0</hw-cloud-vfs-data-common.version>
+		<hw-cloud-vfs-data-hibernate.version>1.0.0</hw-cloud-vfs-data-hibernate.version>
+		<hw-cloud-vfs-rpc.version>1.0.0</hw-cloud-vfs-rpc.version>
+		<log4jdbc-log4j2-jdbc4.1.version>1.16</log4jdbc-log4j2-jdbc4.1.version>
+		<byte-buddy.version>1.6.12</byte-buddy.version>
+		<kafka-clients.version>0.10.2.0</kafka-clients.version>
+		<spring-kafka.version>1.2.1.RELEASE</spring-kafka.version>
+		<org.slf4j.version>1.7.21</org.slf4j.version>
+		<hw-cloud-vfs-data-redis.version>1.0.0</hw-cloud-vfs-data-redis.version>
+		<hw-cloud-vfs-data-mongodb.version>1.0.0</hw-cloud-vfs-data-mongodb.version>
+		<fastjson.version>1.2.28</fastjson.version>
+		<spring-data-mongodb.version>1.10.1.RELEASE</spring-data-mongodb.version>
+		<spring-tx.version>4.3.7.RELEASE</spring-tx.version>
+		<!-- vortex -->
+	</properties>
+	<!-- 预定义依赖项的version,scope与exclusions,子项目中只需定义groupId 和 artifactId 即可 -->
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>com.vortex.cloud</groupId>
+				<artifactId>hw-cloud-ums-util</artifactId>
+				<version>1.0.0</version>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-tx</artifactId>
+				<version>${spring-tx.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.springframework.data</groupId>
+				<artifactId>spring-data-mongodb</artifactId>
+				<version>${spring-data-mongodb.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.alibaba</groupId>
+				<artifactId>fastjson</artifactId>
+				<version>${fastjson.version}</version>
+			</dependency>
+
+
+			<dependency>
+				<groupId>org.springframework.kafka</groupId>
+				<artifactId>spring-kafka</artifactId>
+				<version>${spring-kafka.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.apache.kafka</groupId>
+				<artifactId>kafka-clients</artifactId>
+				<version>${kafka-clients.version}</version>
+			</dependency>
+
+
+			<dependency>
+				<groupId>net.bytebuddy</groupId>
+				<artifactId>byte-buddy</artifactId>
+				<version>${byte-buddy.version}</version>
+			</dependency>
+
+
+			<dependency>
+				<groupId>org.bgee.log4jdbc-log4j2</groupId>
+				<artifactId>log4jdbc-log4j2-jdbc4.1</artifactId>
+				<version>${log4jdbc-log4j2-jdbc4.1.version}</version>
+			</dependency>
+
+
+			<!-- 图片缩略图 -->
+			<dependency>
+				<groupId>net.coobird</groupId>
+				<artifactId>thumbnailator</artifactId>
+				<version>0.4.3</version>
+			</dependency>
+			<dependency>
+				<groupId>org.apache.poi</groupId>
+				<artifactId>poi-ooxml</artifactId>
+				<version>3.14</version>
+			</dependency>
+			<dependency>
+				<groupId>org.apache.poi</groupId>
+				<artifactId>poi-ooxml-schemas</artifactId>
+				<version>3.14</version>
+			</dependency>
+
+			<!-- hw-begin -->
+
+			<dependency>
+				<groupId>com.vortex</groupId>
+				<artifactId>hw-core</artifactId>
+				<version>3.0.6</version>
+			</dependency>
+			<dependency>
+				<groupId>com.vortex.cloud</groupId>
+				<artifactId>hw-cloud-vfs-common-utils</artifactId>
+				<version>${hw-cloud-vfs-common-utils.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.vortex.cloud</groupId>
+				<artifactId>hw-cloud-vfs-common-kafka</artifactId>
+				<version>${hw-cloud-vfs-common-kafka.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.vortex</groupId>
+				<artifactId>util-kafka</artifactId>
+				<version>2.1.0-SNAPSHOT</version>
+			</dependency>
+			<dependency>
+				<groupId>com.vortex.cloud</groupId>
+				<artifactId>hw-cloud-vfs-data-redis</artifactId>
+				<version>${hw-cloud-vfs-data-redis.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.vortex.cloud</groupId>
+				<artifactId>hw-cloud-vfs-data-mongodb</artifactId>
+				<version>${hw-cloud-vfs-data-mongodb.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.vortex.cloud</groupId>
+				<artifactId>hw-cloud-vfs-data-common</artifactId>
+				<version>${hw-cloud-vfs-data-common.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.vortex.cloud</groupId>
+				<artifactId>hw-cloud-vfs-data-hibernate</artifactId>
+				<version>${hw-cloud-vfs-data-hibernate.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.vortex.cloud</groupId>
+				<artifactId>hw-cloud-vfs-data-mybatis</artifactId>
+				<version>${hw-cloud-vfs-data-mybatis.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.vortex.cloud</groupId>
+				<artifactId>hw-cloud-vfs-rpc</artifactId>
+				<version>${hw-cloud-vfs-rpc.version}</version>
+			</dependency>
+
+			<!-- <dependency> <groupId>com.vortex.cloud</groupId> <artifactId>hw-cloud-tts-api</artifactId> 
+				<version>${hw-cloud-tts-api.version}</version> </dependency> <dependency> 
+				<groupId>com.vortex.cloud</groupId> <artifactId>hw-cloud-tts-job</artifactId> 
+				<version>${hw-cloud-tts-job.version}</version> </dependency> <dependency> 
+				<groupId>com.vortex.cloud</groupId> <artifactId>hw-cloud-tts-mq</artifactId> 
+				<version>${hw-cloud-tts-mq.version}</version> </dependency> <dependency> 
+				<groupId>com.vortex.cloud</groupId> <artifactId>hw-cloud-tts-sdk</artifactId> 
+				<version>${hw-cloud-tts-sdk.version}</version> </dependency> <dependency> 
+				<groupId>com.vortex.cloud</groupId> <artifactId>hw-cloud-tts-client</artifactId> 
+				<version>${hw-cloud-tts-client.version}</version> </dependency> -->
+			<!-- 图片缩略图 -->
+			<dependency>
+				<groupId>net.coobird</groupId>
+				<artifactId>thumbnailator</artifactId>
+				<version>0.4.3</version>
+			</dependency>
+			<dependency>
+				<groupId>org.apache.poi</groupId>
+				<artifactId>poi-ooxml</artifactId>
+				<version>3.14</version>
+			</dependency>
+			<dependency>
+				<groupId>org.apache.poi</groupId>
+				<artifactId>poi-ooxml-schemas</artifactId>
+				<version>3.14</version>
+			</dependency>
+			<dependency>
+				<groupId>com.netflix.hystrix</groupId>
+				<artifactId>hystrix-javanica</artifactId>
+				<version>1.4.7</version>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+
+	<build>
+		<plugins>
+			<!-- eclipse plugin -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-eclipse-plugin</artifactId>
+			</plugin>
+
+			<!-- source attach plugin -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-source-plugin</artifactId>
+				<executions>
+					<execution>
+						<id>attach-sources</id>
+						<goals>
+							<goal>jar</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+
+			<!-- enforcer, 规则统一定义在parent -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-enforcer-plugin</artifactId>
+			</plugin>
+		</plugins>
+	</build>
+</project>

@@ -1,7 +1,7 @@
 ########服务端口定义############
 spring:
   profiles:
-    active: dev
+    active: prod
   application:
     name: personal-cloud-redis-server
 ########服务端口定义##############

@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE logback>
+<configuration>
+<springProperty scope="context" name="appName" source="spring.application.name"
+        defaultValue="localhost"/>
+	<!-- <include resource="org/springframework/boot/logging/logback/base.xml" /> -->
+
+	<!-- <appender name="console" class="ch.qos.logback.core.ConsoleAppender">
+		<encoder>
+			<pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger -
+				%msg%n</pattern>
+		</encoder>
+	</appender>
+
+	<appender name="rollingFile"
+		class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<file>logs/hw.log</file>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<fileNamePattern>logs/hw.%d{yyyy-MM-dd}.log</fileNamePattern>
+		</rollingPolicy>
+		<encoder>
+			<pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger -
+				%msg%n</pattern>
+		</encoder>
+	</appender>
+
+	<appender name="businessLogFile"
+		class="ch.qos.logback.core.rolling.RollingFileAppender">
+		按每小时滚动文件，如果一个小时内达到10M也会滚动文件, 滚动文件将会压缩成zip格式
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<fileNamePattern>logs/business-%d{yyyy-MM-dd_HH}.%i.zip</fileNamePattern>
+			<timeBasedFileNamingAndTriggeringPolicy
+				class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+				<maxFileSize>10MB</maxFileSize>
+			</timeBasedFileNamingAndTriggeringPolicy>
+		</rollingPolicy>
+		独立的pattern
+		<encoder>
+			<pattern>%d{HH:mm:ss.SSS},%msg%n</pattern>
+		</encoder>
+	</appender> -->
+	<!--log4jdbc -->
+	<logger name="jdbc.sqlonly" level="WARN" />
+	<logger name="jdbc.sqltiming" level="INFO" />
+	<logger name="jdbc.audit" level="WARN" />
+	<logger name="jdbc.resultset" level="WARN" />
+	<logger name="jdbc.resultsettable" level="WARN" />
+	<logger name="jdbc.connection" level="WARN" />
+	<logger
+		name="org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter"
+		level="DEBUG" />
+
+	<!-- 测试环境+开发环境. 多个使用逗号隔开. -->
+	<springProfile name="test,dev">
+		<logger name="org.springframework.web" level="INFO" />
+		<logger name="com.vortex" level="INFO" />
+		
+		<appender name="console" class="ch.qos.logback.core.ConsoleAppender">
+			<encoder>
+				<pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger -
+					%msg%n</pattern>
+			</encoder>
+		</appender>
+	
+	
+		<appender name="businessLogFile"
+			class="ch.qos.logback.core.rolling.RollingFileAppender">
+			<!-- 按每小时滚动文件，如果一个小时内达到10M也会滚动文件, 滚动文件将会压缩成zip格式 -->
+			<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+				<fileNamePattern>logs/${appName}-business-%d{yyyy-MM-dd_HH}.%i.zip</fileNamePattern>
+				<timeBasedFileNamingAndTriggeringPolicy
+					class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+					<maxFileSize>10MB</maxFileSize>
+				</timeBasedFileNamingAndTriggeringPolicy>
+			</rollingPolicy>
+			<!-- 独立的pattern -->
+			<encoder>
+				<pattern>%d{HH:mm:ss.SSS},%msg%n</pattern>
+			</encoder>
+		</appender>
+	</springProfile>
+
+
+	<!-- 生产环境. -->
+	<springProfile name="prod">
+		<logger name="org.springframework.web" level="ERROR" />
+		<logger name="com.vortex" level="ERROR" />
+		
+		<appender name="console" class="ch.qos.logback.core.ConsoleAppender">
+			<encoder>
+				<pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger -
+					%msg%n</pattern>
+			</encoder>
+		</appender>
+	
+	
+		<appender name="businessLogFile"
+			class="ch.qos.logback.core.rolling.RollingFileAppender">
+			<!-- 按每小时滚动文件，如果一个小时内达到10M也会滚动文件, 滚动文件将会压缩成zip格式 -->
+			<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+				<fileNamePattern>logs/${appName}-business-%d{yyyy-MM-dd_HH}.%i.zip</fileNamePattern>
+				<timeBasedFileNamingAndTriggeringPolicy
+					class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+					<maxFileSize>10MB</maxFileSize>
+				</timeBasedFileNamingAndTriggeringPolicy>
+			</rollingPolicy>
+			<!-- 独立的pattern -->
+			<encoder>
+				<pattern>%d{HH:mm:ss.SSS},%msg%n</pattern>
+			</encoder>
+		</appender>
+	</springProfile>
+	
+	<root level="INFO">
+		<appender-ref ref="console" />
+		<appender-ref ref="businessLogFile" />
+	</root>
+</configuration>

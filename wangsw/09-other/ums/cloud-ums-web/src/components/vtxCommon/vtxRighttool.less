@@ -1,0 +1,113 @@
+
+.rightToolWrapper{
+	position: fixed;
+	top:15px;
+	right:20px;
+	.topRight{
+		height:35px;
+		-webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+	    -moz-box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+		box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+		.rightToolItem{
+			position: relative;
+		    width: 120px;
+		    height: 35px;
+		    text-align: center;
+		    float: left;
+		    .toolbox{
+			    cursor: pointer;
+	    		padding: 7px 0;
+	    		background: white;
+	    		.titleWrapper{
+	    			text-align: center;
+				    height: 21px;
+				    line-height: 21px;
+	    		}
+	    		.toolBranch{
+			    	position: absolute;
+				    top: 35px;
+				    width: 100%;
+				    background-color: white;
+				    padding: 5px 20px;
+				    z-index: 211;
+				    border-bottom: 1px solid #ddd;
+				    border-right: 1px solid #ddd;
+				    border-left: 1px solid #ddd;
+				    .vtxSelectli{
+				    	width:100%;
+				    	margin:10px 0;
+				    	color:rgba(0, 0, 0, 0.65);
+				    	cursor:pointer;
+				    	padding:0;
+				    	border:none;
+				    	.branchTitle{
+				    		border-radius: 4px;
+					    	line-height: 22px;
+					    	border-radius: 4px;
+					    }
+				    }
+				    .vtxSelectli:hover{
+				    	.branchTitle{
+				    		border-radius: 4px;
+					    	line-height: 22px;
+					    	color:#fff;
+					    	background: #5F9FF7;
+					    }
+					    i{
+					    	color:#fff;
+					    }
+				    }
+				    .selected{
+				    	.branchTitle{
+				    		border-radius: 4px;
+					    	line-height: 22px;
+					    	color:#fff;
+					    	background: #5F9FF7;
+					    }
+					    i{
+					    	color:#fff;
+					    }
+				    } 
+			    }
+		    }
+		    .titleContent{
+		    	vertical-align: middle;
+		    	display:inline-block;
+		    	max-width: 90%;
+		    	white-space: nowrap;
+		    	overflow:hidden;
+		    	text-overflow:ellipsis;
+		    	-o-text-overflow:ellipsis;
+		    	i{
+		    		color:#5F9FF7;
+		    		font-size:13px;
+		    	}
+		    	img{
+			    	font-size:0;
+			    	position: relative;
+			    	top:-2px;
+			    	border:none;
+			    }
+		    }
+		}
+	}
+	.displayNone{
+		display: none;
+	}
+}
+.knockWrapper{
+	padding: 7px 0;
+	background: white;
+    .titleWrapper{
+		text-align: center;
+	    border-right: 1px solid #ddd;
+	    height: 21px;
+	    line-height: 21px;
+    	span{
+    		display: inline-block;
+    		i{
+    			font-size: 15px;
+    		}
+    	}
+    }
+}

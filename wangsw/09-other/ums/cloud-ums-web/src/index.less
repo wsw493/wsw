@@ -1,0 +1,16 @@
+html, body, :global(#root) {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+#root ::-webkit-scrollbar, body ::-webkit-scrollbar, html ::-webkit-scrollbar {
+    width: 5px;
+}
+#root ::-webkit-scrollbar-thumb, body ::-webkit-scrollbar-thumb, html ::-webkit-scrollbar-thumb {
+    background-color: hsla(0,0%,71%,.5);
+    border-radius: 3px;
+}
+:global(.ant-modal-body) {
+	max-height: 600px;
+	overflow: auto;
+}

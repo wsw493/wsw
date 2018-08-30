@@ -1,0 +1,8 @@
+Manifest-Version: 1.0
+Implementation-Title: cas-client
+Implementation-Version: 1.0.0
+Built-By: machine
+Implementation-Vendor-Id: com.vortex.cloud
+Build-Jdk: 1.8.0_111
+Created-By: Maven Integration for Eclipse
+

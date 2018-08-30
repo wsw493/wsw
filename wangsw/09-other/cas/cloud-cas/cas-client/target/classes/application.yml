@@ -1,0 +1,22 @@
+
+
+security:
+  oauth2:
+    resource:
+      userInfoUri: http://127.0.0.1:7777/casServer/user
+    client:
+      accessTokenUri: http://127.0.0.1:7777/casServer/oauth/token
+      userAuthorizationUri: http://127.0.0.1:7777/casServer/oauth/authorize
+      clientId: fc6fbbc9-6d84-4abf-9e3f-84f285c03286
+      clientSecret: 124f1a71-7f2f-410c-ac42-ec48ce2de1c2
+
+zuul:
+  routes:
+    user:
+      path: /cas/user/**
+      url: http://127.0.0.1:7777/casServer/user
+      sensitiveHeaders:
+    logout:
+      path: /cas/logout/**
+      url: http://127.0.0.1:7777/casServer/logout
+      sensitiveHeaders:

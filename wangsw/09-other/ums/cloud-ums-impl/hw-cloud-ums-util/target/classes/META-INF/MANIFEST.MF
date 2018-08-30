@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Implementation-Title: hw-cloud-ums-util
+Implementation-Version: 1.0.0
+Built-By: machine
+Implementation-Vendor-Id: com.vortex.cloud
+Build-Jdk: 1.8.0_111
+Implementation-URL: http://maven.apache.org
+Created-By: Maven Integration for Eclipse
+

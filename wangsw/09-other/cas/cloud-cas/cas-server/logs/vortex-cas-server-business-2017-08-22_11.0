@@ -1,0 +1,473 @@
+11:27:52.164,Fetching config from server at: http://localhost:8888
+11:27:53.265,Could not locate PropertySource: I/O error on GET request for "http://localhost:8888/vortex-cas-server/dev": Connection refused: connect; nested exception is java.net.ConnectException: Connection refused: connect
+11:27:53.267,The following profiles are active: dev
+11:27:53.294,Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@c00fff0: startup date [Tue Aug 22 11:27:53 CST 2017]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@7fd7a283
+11:27:55.327,BeanFactory id=5fb3d0a1-36c6-3761-aa0c-c609cfe2dd4a
+11:27:55.362,JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+11:27:55.539,Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$a7c383c2] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+11:27:55.785,Bean 'org.springframework.cloud.netflix.metrics.MetricsInterceptorConfiguration$MetricsRestTemplateConfiguration' of type [org.springframework.cloud.netflix.metrics.MetricsInterceptorConfiguration$MetricsRestTemplateConfiguration$$EnhancerBySpringCGLIB$$d9f02a03] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+11:27:55.804,Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$c3dd86bf] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+11:27:56.496,Tomcat initialized with port(s): 7777 (http)
+11:27:56.513,Starting service Tomcat
+11:27:56.515,Starting Servlet Engine: Apache Tomcat/8.5.6
+11:27:56.683,Initializing Spring embedded WebApplicationContext
+11:27:56.683,Root WebApplicationContext: initialization completed in 3389 ms
+11:27:57.057,Mapping filter: 'metricsFilter' to: [/*]
+11:27:57.058,Mapping filter: 'characterEncodingFilter' to: [/*]
+11:27:57.058,Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+11:27:57.058,Mapping filter: 'httpPutFormContentFilter' to: [/*]
+11:27:57.058,Mapping filter: 'requestContextFilter' to: [/*]
+11:27:57.059,Mapping filter: 'springSecurityFilterChain' to: [/*]
+11:27:57.059,Mapping filter: 'webRequestLoggingFilter' to: [/*]
+11:27:57.060,Mapping filter: 'applicationContextIdFilter' to: [/*]
+11:27:57.060,Mapping servlet: 'dispatcherServlet' to [/]
+11:27:57.582,{dataSource-1} inited
+11:27:57.883,Building JPA container EntityManagerFactory for persistence unit 'default'
+11:27:57.977,HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+11:27:58.221,HHH000412: Hibernate Core {5.2.10.Final}
+11:27:58.237,HHH000206: hibernate.properties not found
+11:27:58.313,HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+11:27:58.528,HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+11:27:59.023,Initialized JPA EntityManagerFactory for persistence unit 'default'
+11:27:59.661,Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'centralCacheService': Failed to introspect bean class [com.vortex.cloud.vfs.data.redis.impl.CentralCacheService] for lookup method metadata: could not find class that it depends on; nested exception is java.lang.NoClassDefFoundError: org/springframework/data/redis/core/SessionCallback
+11:27:59.662,Closing JPA EntityManagerFactory for persistence unit 'default'
+11:27:59.666,{dataSource-1} closed
+11:27:59.667,Stopping service Tomcat
+11:27:59.676,Error handling failed (Error creating bean with name 'delegatingApplicationListener' defined in class path resource [org/springframework/security/config/annotation/web/configuration/WebSecurityConfiguration.class]: BeanPostProcessor before instantiation of bean failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.transaction.config.internalTransactionAdvisor' defined in class path resource [org/springframework/transaction/annotation/ProxyTransactionManagementConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.transaction.interceptor.BeanFactoryTransactionAttributeSourceAdvisor]: Factory method 'transactionAdvisor' threw exception; nested exception is java.lang.NullPointerException)
+11:27:59.685,Application startup failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'centralCacheService': Failed to introspect bean class [com.vortex.cloud.vfs.data.redis.impl.CentralCacheService] for lookup method metadata: could not find class that it depends on; nested exception is java.lang.NoClassDefFoundError: org/springframework/data/redis/core/SessionCallback
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.determineCandidateConstructors(AutowiredAnnotationBeanPostProcessor.java:269)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.determineConstructorsFromBeanPostProcessors(AbstractAutowireCapableBeanFactory.java:1118)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1091)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:513)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:761)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:866)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:542)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:122)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:761)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:371)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1186)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1175)
+	at com.vortex.cloud.cas.server.CasServerApplication.main(CasServerApplication.java:31)
+Caused by: java.lang.NoClassDefFoundError: org/springframework/data/redis/core/SessionCallback
+	at java.lang.Class.getDeclaredMethods0(Native Method)
+	at java.lang.Class.privateGetDeclaredMethods(Unknown Source)
+	at java.lang.Class.getDeclaredMethods(Unknown Source)
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:613)
+	at org.springframework.util.ReflectionUtils.doWithMethods(ReflectionUtils.java:524)
+	at org.springframework.util.ReflectionUtils.doWithMethods(ReflectionUtils.java:510)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.determineCandidateConstructors(AutowiredAnnotationBeanPostProcessor.java:247)
+	... 18 common frames omitted
+Caused by: java.lang.ClassNotFoundException: org.springframework.data.redis.core.SessionCallback
+	at java.net.URLClassLoader.findClass(Unknown Source)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Unknown Source)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	... 25 common frames omitted
+11:30:35.244,Fetching config from server at: http://localhost:8888
+11:30:36.338,Could not locate PropertySource: I/O error on GET request for "http://localhost:8888/vortex-cas-server/dev": Connection refused: connect; nested exception is java.net.ConnectException: Connection refused: connect
+11:30:36.339,The following profiles are active: dev
+11:30:36.362,Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@120f38e6: startup date [Tue Aug 22 11:30:36 CST 2017]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@2e570ded
+11:30:38.325,Multiple Spring Data modules found, entering strict repository configuration mode!
+11:30:38.464,Multiple Spring Data modules found, entering strict repository configuration mode!
+11:30:39.004,BeanFactory id=4a1cc235-5b43-36e1-a982-c1f93d030f34
+11:30:39.043,JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+11:30:39.308,Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$c1387637] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+11:30:39.592,Bean 'org.springframework.cloud.netflix.metrics.MetricsInterceptorConfiguration$MetricsRestTemplateConfiguration' of type [org.springframework.cloud.netflix.metrics.MetricsInterceptorConfiguration$MetricsRestTemplateConfiguration$$EnhancerBySpringCGLIB$$f3651c78] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+11:30:39.608,Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$dd527934] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+11:30:40.215,Tomcat initialized with port(s): 7777 (http)
+11:30:40.237,Starting service Tomcat
+11:30:40.238,Starting Servlet Engine: Apache Tomcat/8.5.6
+11:30:40.407,Initializing Spring embedded WebApplicationContext
+11:30:40.408,Root WebApplicationContext: initialization completed in 4046 ms
+11:30:40.871,Mapping filter: 'metricsFilter' to: [/*]
+11:30:40.871,Mapping filter: 'characterEncodingFilter' to: [/*]
+11:30:40.872,Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+11:30:40.872,Mapping filter: 'httpPutFormContentFilter' to: [/*]
+11:30:40.872,Mapping filter: 'requestContextFilter' to: [/*]
+11:30:40.873,Mapping filter: 'springSecurityFilterChain' to: [/*]
+11:30:40.873,Mapping filter: 'webRequestLoggingFilter' to: [/*]
+11:30:40.874,Mapping filter: 'applicationContextIdFilter' to: [/*]
+11:30:40.874,Mapping servlet: 'dispatcherServlet' to [/]
+11:30:41.198,{dataSource-1} inited
+11:30:41.497,Building JPA container EntityManagerFactory for persistence unit 'default'
+11:30:41.528,HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+11:30:41.687,HHH000412: Hibernate Core {5.2.10.Final}
+11:30:41.689,HHH000206: hibernate.properties not found
+11:30:41.755,HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+11:30:41.944,HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+11:30:42.252,Initialized JPA EntityManagerFactory for persistence unit 'default'
+11:30:43.483,Mapped "{[/oauth/authorize]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.security.oauth2.provider.endpoint.AuthorizationEndpoint.authorize(java.util.Map<java.lang.String, java.lang.Object>,java.util.Map<java.lang.String, java.lang.String>,org.springframework.web.bind.support.SessionStatus,java.security.Principal)
+11:30:43.485,Mapped "{[/oauth/authorize],methods=[POST],params=[user_oauth_approval]}" onto public org.springframework.web.servlet.View org.springframework.security.oauth2.provider.endpoint.AuthorizationEndpoint.approveOrDeny(java.util.Map<java.lang.String, java.lang.String>,java.util.Map<java.lang.String, ?>,org.springframework.web.bind.support.SessionStatus,java.security.Principal)
+11:30:43.487,Mapped "{[/oauth/token],methods=[POST]}" onto public org.springframework.http.ResponseEntity<org.springframework.security.oauth2.common.OAuth2AccessToken> org.springframework.security.oauth2.provider.endpoint.TokenEndpoint.postAccessToken(java.security.Principal,java.util.Map<java.lang.String, java.lang.String>) throws org.springframework.web.HttpRequestMethodNotSupportedException
+11:30:43.488,Mapped "{[/oauth/token],methods=[GET]}" onto public org.springframework.http.ResponseEntity<org.springframework.security.oauth2.common.OAuth2AccessToken> org.springframework.security.oauth2.provider.endpoint.TokenEndpoint.getAccessToken(java.security.Principal,java.util.Map<java.lang.String, java.lang.String>) throws org.springframework.web.HttpRequestMethodNotSupportedException
+11:30:43.489,Mapped "{[/oauth/check_token]}" onto public java.util.Map<java.lang.String, ?> org.springframework.security.oauth2.provider.endpoint.CheckTokenEndpoint.checkToken(java.lang.String)
+11:30:43.490,Mapped "{[/oauth/confirm_access]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.security.oauth2.provider.endpoint.WhitelabelApprovalEndpoint.getAccessConfirmation(java.util.Map<java.lang.String, java.lang.Object>,javax.servlet.http.HttpServletRequest) throws java.lang.Exception
+11:30:43.491,Mapped "{[/oauth/error]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.security.oauth2.provider.endpoint.WhitelabelErrorEndpoint.handleError(javax.servlet.http.HttpServletRequest)
+11:30:43.555,Creating filter chain: OrRequestMatcher [requestMatchers=[Ant [pattern='/css/**'], Ant [pattern='/js/**'], Ant [pattern='/images/**'], Ant [pattern='/webjars/**'], Ant [pattern='/**/favicon.ico'], Ant [pattern='/error']]], []
+11:30:43.767,Creating filter chain: OrRequestMatcher [requestMatchers=[Ant [pattern='/oauth/token'], Ant [pattern='/oauth/token_key'], Ant [pattern='/oauth/check_token']]], [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5d782a4a, org.springframework.security.web.context.SecurityContextPersistenceFilter@1d6014a7, org.springframework.security.web.header.HeaderWriterFilter@693ed09d, org.springframework.security.web.authentication.logout.LogoutFilter@9863ed5, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@41120e48, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4626f584, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@15a5cc6e, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@cc91fe3, org.springframework.security.web.session.SessionManagementFilter@7dd2a5f7, org.springframework.security.web.access.ExceptionTranslationFilter@1f24e33d, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@f2b4303]
+11:30:43.799,Creating filter chain: org.springframework.security.oauth2.config.annotation.web.configuration.ResourceServerConfiguration$NotOAuthRequestMatcher@2b441609, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@22f7bf36, org.springframework.security.web.context.SecurityContextPersistenceFilter@893081e, org.springframework.security.web.header.HeaderWriterFilter@54fd5759, org.springframework.security.web.authentication.logout.LogoutFilter@22561412, org.springframework.security.oauth2.provider.authentication.OAuth2AuthenticationProcessingFilter@3cd89c72, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5a941fb4, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@646ddc20, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4a3404fa, org.springframework.security.web.session.SessionManagementFilter@6a358906, org.springframework.security.web.access.ExceptionTranslationFilter@220e1b7b, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@4d071e4b]
+11:30:43.805,Creating filter chain: org.springframework.boot.actuate.autoconfigure.ManagementWebSecurityAutoConfiguration$LazyEndpointPathRequestMatcher@ec70725, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2082e0e4, org.springframework.security.web.context.SecurityContextPersistenceFilter@1fa24e7, org.springframework.security.web.header.HeaderWriterFilter@13087c75, org.springframework.security.web.authentication.logout.LogoutFilter@2a0881f1, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@1185b0b7, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5192b301, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1a99692, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@15f229e8, org.springframework.security.web.session.SessionManagementFilter@da4c5cb, org.springframework.security.web.access.ExceptionTranslationFilter@4c438f66, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@3881b884]
+11:30:43.819,Creating filter chain: OrRequestMatcher [requestMatchers=[Ant [pattern='/oauth/token'], Ant [pattern='/oauth/authorize'], Ant [pattern='/oauth/confirm_access']]], [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@22a22f1, org.springframework.security.web.context.SecurityContextPersistenceFilter@7b9d602c, org.springframework.security.web.header.HeaderWriterFilter@63614cdd, org.springframework.security.web.csrf.CsrfFilter@16eb93af, org.springframework.security.web.authentication.logout.LogoutFilter@3d763ae5, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@30a5a58d, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@59cb10e0, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2e76d0d3, org.springframework.security.web.session.SessionManagementFilter@1e9f48d4, org.springframework.security.web.access.ExceptionTranslationFilter@8f8717b, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@4587f0f9]
+11:30:44.228,Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@120f38e6: startup date [Tue Aug 22 11:30:36 CST 2017]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@2e570ded
+11:30:44.362,Mapped "{[/c/logout],methods=[GET || POST]}" onto public com.vortex.cloud.vfs.data.dto.RestResultDto<?> com.vortex.cloud.cas.server.controller.UserController.logout()
+11:30:44.362,Mapped "{[/user],methods=[GET || POST]}" onto public com.vortex.cloud.vfs.data.dto.RestResultDto<?> com.vortex.cloud.cas.server.controller.UserController.getUser(java.security.Principal)
+11:30:44.364,Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+11:30:44.365,Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+11:30:44.409,Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+11:30:44.409,Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+11:30:44.469,Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+11:30:45.399,Mapped "{[/resume || /resume.json],methods=[POST]}" onto public java.lang.Object org.springframework.cloud.endpoint.GenericPostableMvcEndpoint.invoke()
+11:30:45.402,Mapped "{[/configprops || /configprops.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+11:30:45.403,Mapped "{[/features || /features.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+11:30:45.406,Mapped "{[/refresh || /refresh.json],methods=[POST]}" onto public java.lang.Object org.springframework.cloud.endpoint.GenericPostableMvcEndpoint.invoke()
+11:30:45.407,Mapped "{[/archaius || /archaius.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+11:30:45.407,Mapped "{[/mappings || /mappings.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+11:30:45.408,Mapped "{[/autoconfig || /autoconfig.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+11:30:45.409,Mapped "{[/health || /health.json],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.HealthMvcEndpoint.invoke(java.security.Principal)
+11:30:45.409,Mapped "{[/service-registry/instance-status],methods=[GET]}" onto public org.springframework.http.ResponseEntity org.springframework.cloud.client.serviceregistry.endpoint.ServiceRegistryEndpoint.getStatus()
+11:30:45.410,Mapped "{[/service-registry/instance-status],methods=[POST]}" onto public org.springframework.http.ResponseEntity<?> org.springframework.cloud.client.serviceregistry.endpoint.ServiceRegistryEndpoint.setStatus(java.lang.String)
+11:30:45.412,Mapped "{[/trace || /trace.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+11:30:45.413,Mapped "{[/metrics/{name:.*}],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.MetricsMvcEndpoint.value(java.lang.String)
+11:30:45.413,Mapped "{[/metrics || /metrics.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+11:30:45.413,Mapped "{[/env],methods=[POST]}" onto public java.lang.Object org.springframework.cloud.context.environment.EnvironmentManagerMvcEndpoint.value(java.util.Map<java.lang.String, java.lang.String>)
+11:30:45.414,Mapped "{[/env/reset],methods=[POST]}" onto public java.util.Map<java.lang.String, java.lang.Object> org.springframework.cloud.context.environment.EnvironmentManagerMvcEndpoint.reset()
+11:30:45.414,Mapped "{[/pause || /pause.json],methods=[POST]}" onto public java.lang.Object org.springframework.cloud.endpoint.GenericPostableMvcEndpoint.invoke()
+11:30:45.417,Mapped "{[/env/{name:.*}],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EnvironmentMvcEndpoint.value(java.lang.String)
+11:30:45.417,Mapped "{[/env || /env.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+11:30:45.418,Mapped "{[/heapdump || /heapdump.json],methods=[GET],produces=[application/octet-stream]}" onto public void org.springframework.boot.actuate.endpoint.mvc.HeapdumpMvcEndpoint.invoke(boolean,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.io.IOException,javax.servlet.ServletException
+11:30:45.418,Mapped "{[/restart || /restart.json],methods=[POST]}" onto public java.lang.Object org.springframework.cloud.context.restart.RestartMvcEndpoint.invoke()
+11:30:45.419,Mapped "{[/dump || /dump.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+11:30:45.419,Mapped "{[/info || /info.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+11:30:45.420,Mapped "{[/beans || /beans.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+11:30:45.880,No URLs will be polled as dynamic configuration sources.
+11:30:45.880,To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+11:30:45.890,No URLs will be polled as dynamic configuration sources.
+11:30:45.891,To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+11:30:46.006,Registering beans for JMX exposure on startup
+11:30:46.010,Bean with name 'dataSource' has been autodetected for JMX exposure
+11:30:46.021,Bean with name 'environmentManager' has been autodetected for JMX exposure
+11:30:46.023,Bean with name 'configurationPropertiesRebinder' has been autodetected for JMX exposure
+11:30:46.026,Bean with name 'refreshEndpoint' has been autodetected for JMX exposure
+11:30:46.028,Bean with name 'restartEndpoint' has been autodetected for JMX exposure
+11:30:46.029,Bean with name 'serviceRegistryEndpoint' has been autodetected for JMX exposure
+11:30:46.030,Bean with name 'refreshScope' has been autodetected for JMX exposure
+11:30:46.034,Located managed bean 'environmentManager': registering with JMX server as MBean [org.springframework.cloud.context.environment:name=environmentManager,type=EnvironmentManager]
+11:30:46.060,Located managed bean 'restartEndpoint': registering with JMX server as MBean [org.springframework.cloud.context.restart:name=restartEndpoint,type=RestartEndpoint]
+11:30:46.073,Located managed bean 'serviceRegistryEndpoint': registering with JMX server as MBean [org.springframework.cloud.client.serviceregistry.endpoint:name=serviceRegistryEndpoint,type=ServiceRegistryEndpoint]
+11:30:46.081,Located managed bean 'refreshScope': registering with JMX server as MBean [org.springframework.cloud.context.scope.refresh:name=refreshScope,type=RefreshScope]
+11:30:46.094,Located managed bean 'configurationPropertiesRebinder': registering with JMX server as MBean [org.springframework.cloud.context.properties:name=configurationPropertiesRebinder,context=120f38e6,type=ConfigurationPropertiesRebinder]
+11:30:46.099,Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=dataSource,type=DruidDataSource]
+11:30:46.101,Located managed bean 'refreshEndpoint': registering with JMX server as MBean [org.springframework.cloud.endpoint:name=refreshEndpoint,type=RefreshEndpoint]
+11:30:46.102,Registering beans for JMX exposure on startup
+11:30:46.436,Starting beans in phase 0
+11:30:46.444,Setting initial instance status as: STARTING
+11:30:46.508,Initializing Eureka in region us-east-1
+11:30:47.098,Using JSON encoding codec LegacyJacksonJson
+11:30:47.099,Using JSON decoding codec LegacyJacksonJson
+11:30:47.230,Using XML encoding codec XStreamXml
+11:30:47.231,Using XML decoding codec XStreamXml
+11:30:47.471,Resolving eureka endpoints via configuration
+11:30:47.534,Disable delta property : false
+11:30:47.534,Single vip registry refresh property : null
+11:30:47.534,Force full registry fetch : false
+11:30:47.535,Application is null : false
+11:30:47.535,Registered Applications size is zero : true
+11:30:47.535,Application version is -1: true
+11:30:47.535,Getting all instance registry info from the eureka server
+11:30:47.728,The response status is 200
+11:30:47.730,Starting heartbeat executor: renew interval is: 30
+11:30:47.734,InstanceInfoReplicator onDemand update allowed rate per min is 4
+11:30:47.738,Discovery Client initialized at timestamp 1503372647738 with initial instances count: 3
+11:30:47.789,Registering application vortex-cas-server with eureka with status UP
+11:30:47.790,Saw local status change event StatusChangeEvent [timestamp=1503372647790, current=UP, previous=STARTING]
+11:30:47.791,DiscoveryClient_VORTEX-CAS-SERVER/vortex-cas-server:192.168.1.21:7777: registering service...
+11:30:47.795,Located managed bean 'featuresEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=featuresEndpoint]
+11:30:47.811,Located managed bean 'requestMappingEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=requestMappingEndpoint]
+11:30:47.813,Located managed bean 'environmentEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=environmentEndpoint]
+11:30:47.816,Located managed bean 'healthEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=healthEndpoint]
+11:30:47.820,Located managed bean 'beansEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=beansEndpoint]
+11:30:47.823,Located managed bean 'infoEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=infoEndpoint]
+11:30:47.831,Located managed bean 'metricsEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=metricsEndpoint]
+11:30:47.835,Located managed bean 'traceEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=traceEndpoint]
+11:30:47.838,Located managed bean 'dumpEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=dumpEndpoint]
+11:30:47.840,Located managed bean 'autoConfigurationReportEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=autoConfigurationReportEndpoint]
+11:30:47.843,Located managed bean 'configurationPropertiesReportEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=configurationPropertiesReportEndpoint]
+11:30:47.845,Located managed bean 'archaiusEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=archaiusEndpoint]
+11:30:47.910,Initializing ProtocolHandler ["http-nio-7777"]
+11:30:47.927,Starting ProtocolHandler [http-nio-7777]
+11:30:47.944,Failed to start end point associated with ProtocolHandler [http-nio-7777]
+java.net.BindException: Address already in use: bind
+	at sun.nio.ch.Net.bind0(Native Method)
+	at sun.nio.ch.Net.bind(Unknown Source)
+	at sun.nio.ch.Net.bind(Unknown Source)
+	at sun.nio.ch.ServerSocketChannelImpl.bind(Unknown Source)
+	at sun.nio.ch.ServerSocketAdaptor.bind(Unknown Source)
+	at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:228)
+	at org.apache.tomcat.util.net.AbstractEndpoint.start(AbstractEndpoint.java:874)
+	at org.apache.coyote.AbstractProtocol.start(AbstractProtocol.java:590)
+	at org.apache.catalina.connector.Connector.startInternal(Connector.java:969)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.StandardService.addConnector(StandardService.java:225)
+	at org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer.addPreviouslyRemovedConnectors(TomcatEmbeddedServletContainer.java:233)
+	at org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer.start(TomcatEmbeddedServletContainer.java:178)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.startEmbeddedServletContainer(EmbeddedWebApplicationContext.java:297)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.finishRefresh(EmbeddedWebApplicationContext.java:145)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:545)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:122)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:761)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:371)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1186)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1175)
+	at com.vortex.cloud.cas.server.CasServerApplication.main(CasServerApplication.java:31)
+11:30:47.945,Failed to start connector [Connector[HTTP/1.1-7777]]
+org.apache.catalina.LifecycleException: Failed to start component [Connector[HTTP/1.1-7777]]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:167)
+	at org.apache.catalina.core.StandardService.addConnector(StandardService.java:225)
+	at org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer.addPreviouslyRemovedConnectors(TomcatEmbeddedServletContainer.java:233)
+	at org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer.start(TomcatEmbeddedServletContainer.java:178)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.startEmbeddedServletContainer(EmbeddedWebApplicationContext.java:297)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.finishRefresh(EmbeddedWebApplicationContext.java:145)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:545)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:122)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:761)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:371)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1186)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1175)
+	at com.vortex.cloud.cas.server.CasServerApplication.main(CasServerApplication.java:31)
+Caused by: org.apache.catalina.LifecycleException: service.getName(): "Tomcat";  Protocol handler start failed
+	at org.apache.catalina.connector.Connector.startInternal(Connector.java:976)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	... 13 common frames omitted
+Caused by: java.net.BindException: Address already in use: bind
+	at sun.nio.ch.Net.bind0(Native Method)
+	at sun.nio.ch.Net.bind(Unknown Source)
+	at sun.nio.ch.Net.bind(Unknown Source)
+	at sun.nio.ch.ServerSocketChannelImpl.bind(Unknown Source)
+	at sun.nio.ch.ServerSocketAdaptor.bind(Unknown Source)
+	at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:228)
+	at org.apache.tomcat.util.net.AbstractEndpoint.start(AbstractEndpoint.java:874)
+	at org.apache.coyote.AbstractProtocol.start(AbstractProtocol.java:590)
+	at org.apache.catalina.connector.Connector.startInternal(Connector.java:969)
+	... 14 common frames omitted
+11:30:47.963,Pausing ProtocolHandler ["http-nio-7777"]
+11:30:47.963,Stopping service Tomcat
+11:30:47.969,The stop() method was called on component [StandardServer[-1]] after stop() had already been called. The second call will be ignored.
+11:30:47.969,Stopping ProtocolHandler ["http-nio-7777"]
+11:30:47.969,Destroying ProtocolHandler ["http-nio-7777"]
+11:30:47.974,
+
+Error starting ApplicationContext. To display the auto-configuration report re-run your application with 'debug' enabled.
+11:30:47.978,Application failed to start due to an exception
+org.springframework.boot.context.embedded.tomcat.ConnectorStartFailedException: Connector configured to listen on port 7777 failed to start
+	at org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer.checkThatConnectorsHaveStarted(TomcatEmbeddedServletContainer.java:205)
+	at org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer.start(TomcatEmbeddedServletContainer.java:183)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.startEmbeddedServletContainer(EmbeddedWebApplicationContext.java:297)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.finishRefresh(EmbeddedWebApplicationContext.java:145)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:545)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:122)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:761)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:371)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1186)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1175)
+	at com.vortex.cloud.cas.server.CasServerApplication.main(CasServerApplication.java:31)
+11:30:47.978,
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The Tomcat connector configured to listen on port 7777 failed to start. The port may already be in use or the connector may be misconfigured.
+
+Action:
+
+Verify the connector's configuration, identify and stop any process that's listening on port 7777, or configure this application to listen on another port.
+
+11:30:47.980,Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@120f38e6: startup date [Tue Aug 22 11:30:36 CST 2017]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@2e570ded
+11:30:47.981,Unregistering application vortex-cas-server with eureka with status DOWN
+11:30:47.981,Saw local status change event StatusChangeEvent [timestamp=1503372647981, current=DOWN, previous=UP]
+11:30:47.982,Shutting down DiscoveryClient ...
+11:30:47.982,Unregistering ...
+11:30:48.041,DiscoveryClient_VORTEX-CAS-SERVER/vortex-cas-server:192.168.1.21:7777 - deregister  status: 200
+11:30:48.045,DiscoveryClient_VORTEX-CAS-SERVER/vortex-cas-server:192.168.1.21:7777 - registration status: 204
+11:30:48.048,Completed shut down of DiscoveryClient
+11:30:48.051,Stopping beans in phase 0
+11:30:48.056,Unregistering JMX-exposed beans on shutdown
+11:30:48.057,Unregistering JMX-exposed beans
+11:30:48.058,Unregistering JMX-exposed beans on shutdown
+11:30:48.058,Unregistering JMX-exposed beans
+11:30:48.062,Closing JPA EntityManagerFactory for persistence unit 'default'
+11:30:48.067,{dataSource-1} closed
+11:31:33.660,Fetching config from server at: http://localhost:8888
+11:31:34.756,Could not locate PropertySource: I/O error on GET request for "http://localhost:8888/vortex-cas-server/dev": Connection refused: connect; nested exception is java.net.ConnectException: Connection refused: connect
+11:31:34.760,The following profiles are active: dev
+11:31:34.802,Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@120f38e6: startup date [Tue Aug 22 11:31:34 CST 2017]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@2e570ded
+11:31:36.641,Multiple Spring Data modules found, entering strict repository configuration mode!
+11:31:36.768,Multiple Spring Data modules found, entering strict repository configuration mode!
+11:31:37.202,BeanFactory id=4a1cc235-5b43-36e1-a982-c1f93d030f34
+11:31:37.243,JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+11:31:37.425,Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$c1387637] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+11:31:37.604,Bean 'org.springframework.cloud.netflix.metrics.MetricsInterceptorConfiguration$MetricsRestTemplateConfiguration' of type [org.springframework.cloud.netflix.metrics.MetricsInterceptorConfiguration$MetricsRestTemplateConfiguration$$EnhancerBySpringCGLIB$$f3651c78] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+11:31:37.623,Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$dd527934] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+11:31:38.203,Tomcat initialized with port(s): 7778 (http)
+11:31:38.218,Starting service Tomcat
+11:31:38.219,Starting Servlet Engine: Apache Tomcat/8.5.6
+11:31:38.376,Initializing Spring embedded WebApplicationContext
+11:31:38.376,Root WebApplicationContext: initialization completed in 3574 ms
+11:31:38.774,Mapping filter: 'metricsFilter' to: [/*]
+11:31:38.774,Mapping filter: 'characterEncodingFilter' to: [/*]
+11:31:38.774,Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+11:31:38.774,Mapping filter: 'httpPutFormContentFilter' to: [/*]
+11:31:38.774,Mapping filter: 'requestContextFilter' to: [/*]
+11:31:38.776,Mapping filter: 'springSecurityFilterChain' to: [/*]
+11:31:38.776,Mapping filter: 'webRequestLoggingFilter' to: [/*]
+11:31:38.776,Mapping filter: 'applicationContextIdFilter' to: [/*]
+11:31:38.776,Mapping servlet: 'dispatcherServlet' to [/]
+11:31:39.120,{dataSource-1} inited
+11:31:39.399,Building JPA container EntityManagerFactory for persistence unit 'default'
+11:31:39.423,HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+11:31:39.540,HHH000412: Hibernate Core {5.2.10.Final}
+11:31:39.542,HHH000206: hibernate.properties not found
+11:31:39.605,HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+11:31:39.785,HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+11:31:40.134,Initialized JPA EntityManagerFactory for persistence unit 'default'
+11:31:41.262,Mapped "{[/oauth/authorize]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.security.oauth2.provider.endpoint.AuthorizationEndpoint.authorize(java.util.Map<java.lang.String, java.lang.Object>,java.util.Map<java.lang.String, java.lang.String>,org.springframework.web.bind.support.SessionStatus,java.security.Principal)
+11:31:41.269,Mapped "{[/oauth/authorize],methods=[POST],params=[user_oauth_approval]}" onto public org.springframework.web.servlet.View org.springframework.security.oauth2.provider.endpoint.AuthorizationEndpoint.approveOrDeny(java.util.Map<java.lang.String, java.lang.String>,java.util.Map<java.lang.String, ?>,org.springframework.web.bind.support.SessionStatus,java.security.Principal)
+11:31:41.272,Mapped "{[/oauth/token],methods=[GET]}" onto public org.springframework.http.ResponseEntity<org.springframework.security.oauth2.common.OAuth2AccessToken> org.springframework.security.oauth2.provider.endpoint.TokenEndpoint.getAccessToken(java.security.Principal,java.util.Map<java.lang.String, java.lang.String>) throws org.springframework.web.HttpRequestMethodNotSupportedException
+11:31:41.272,Mapped "{[/oauth/token],methods=[POST]}" onto public org.springframework.http.ResponseEntity<org.springframework.security.oauth2.common.OAuth2AccessToken> org.springframework.security.oauth2.provider.endpoint.TokenEndpoint.postAccessToken(java.security.Principal,java.util.Map<java.lang.String, java.lang.String>) throws org.springframework.web.HttpRequestMethodNotSupportedException
+11:31:41.274,Mapped "{[/oauth/check_token]}" onto public java.util.Map<java.lang.String, ?> org.springframework.security.oauth2.provider.endpoint.CheckTokenEndpoint.checkToken(java.lang.String)
+11:31:41.275,Mapped "{[/oauth/confirm_access]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.security.oauth2.provider.endpoint.WhitelabelApprovalEndpoint.getAccessConfirmation(java.util.Map<java.lang.String, java.lang.Object>,javax.servlet.http.HttpServletRequest) throws java.lang.Exception
+11:31:41.276,Mapped "{[/oauth/error]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.security.oauth2.provider.endpoint.WhitelabelErrorEndpoint.handleError(javax.servlet.http.HttpServletRequest)
+11:31:41.349,Creating filter chain: OrRequestMatcher [requestMatchers=[Ant [pattern='/css/**'], Ant [pattern='/js/**'], Ant [pattern='/images/**'], Ant [pattern='/webjars/**'], Ant [pattern='/**/favicon.ico'], Ant [pattern='/error']]], []
+11:31:41.499,Creating filter chain: OrRequestMatcher [requestMatchers=[Ant [pattern='/oauth/token'], Ant [pattern='/oauth/token_key'], Ant [pattern='/oauth/check_token']]], [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5d782a4a, org.springframework.security.web.context.SecurityContextPersistenceFilter@1d6014a7, org.springframework.security.web.header.HeaderWriterFilter@693ed09d, org.springframework.security.web.authentication.logout.LogoutFilter@9863ed5, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@41120e48, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4626f584, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@15a5cc6e, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@cc91fe3, org.springframework.security.web.session.SessionManagementFilter@7dd2a5f7, org.springframework.security.web.access.ExceptionTranslationFilter@1f24e33d, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@f2b4303]
+11:31:41.533,Creating filter chain: org.springframework.security.oauth2.config.annotation.web.configuration.ResourceServerConfiguration$NotOAuthRequestMatcher@5a079446, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@694c0ed1, org.springframework.security.web.context.SecurityContextPersistenceFilter@893081e, org.springframework.security.web.header.HeaderWriterFilter@54fd5759, org.springframework.security.web.authentication.logout.LogoutFilter@22561412, org.springframework.security.oauth2.provider.authentication.OAuth2AuthenticationProcessingFilter@64acf8d2, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5a941fb4, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@646ddc20, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@118f2486, org.springframework.security.web.session.SessionManagementFilter@6a358906, org.springframework.security.web.access.ExceptionTranslationFilter@220e1b7b, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@7fb46c10]
+11:31:41.539,Creating filter chain: org.springframework.boot.actuate.autoconfigure.ManagementWebSecurityAutoConfiguration$LazyEndpointPathRequestMatcher@461b38ca, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1387bd84, org.springframework.security.web.context.SecurityContextPersistenceFilter@37c762aa, org.springframework.security.web.header.HeaderWriterFilter@41a3c6f5, org.springframework.security.web.authentication.logout.LogoutFilter@da4c5cb, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@407d2a01, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4c438f66, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@13087c75, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3881b884, org.springframework.security.web.session.SessionManagementFilter@5b78a946, org.springframework.security.web.access.ExceptionTranslationFilter@2b5a04b0, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@54fffa5a]
+11:31:41.551,Creating filter chain: OrRequestMatcher [requestMatchers=[Ant [pattern='/oauth/token'], Ant [pattern='/oauth/authorize'], Ant [pattern='/oauth/confirm_access']]], [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@30eee098, org.springframework.security.web.context.SecurityContextPersistenceFilter@4244e477, org.springframework.security.web.header.HeaderWriterFilter@404566e7, org.springframework.security.web.csrf.CsrfFilter@2c0d7099, org.springframework.security.web.authentication.logout.LogoutFilter@1e9f48d4, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@8f8717b, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@63614cdd, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3123ba75, org.springframework.security.web.session.SessionManagementFilter@3ed87b6e, org.springframework.security.web.access.ExceptionTranslationFilter@16eb93af, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@2dfab167]
+11:31:41.972,Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@120f38e6: startup date [Tue Aug 22 11:31:34 CST 2017]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@2e570ded
+11:31:42.082,Mapped "{[/c/logout],methods=[GET || POST]}" onto public com.vortex.cloud.vfs.data.dto.RestResultDto<?> com.vortex.cloud.cas.server.controller.UserController.logout()
+11:31:42.082,Mapped "{[/user],methods=[GET || POST]}" onto public com.vortex.cloud.vfs.data.dto.RestResultDto<?> com.vortex.cloud.cas.server.controller.UserController.getUser(java.security.Principal)
+11:31:42.084,Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+11:31:42.084,Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+11:31:42.129,Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+11:31:42.129,Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+11:31:42.211,Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+11:31:43.108,Mapped "{[/info || /info.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+11:31:43.109,Mapped "{[/trace || /trace.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+11:31:43.110,Mapped "{[/dump || /dump.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+11:31:43.111,Mapped "{[/heapdump || /heapdump.json],methods=[GET],produces=[application/octet-stream]}" onto public void org.springframework.boot.actuate.endpoint.mvc.HeapdumpMvcEndpoint.invoke(boolean,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.io.IOException,javax.servlet.ServletException
+11:31:43.111,Mapped "{[/refresh || /refresh.json],methods=[POST]}" onto public java.lang.Object org.springframework.cloud.endpoint.GenericPostableMvcEndpoint.invoke()
+11:31:43.113,Mapped "{[/resume || /resume.json],methods=[POST]}" onto public java.lang.Object org.springframework.cloud.endpoint.GenericPostableMvcEndpoint.invoke()
+11:31:43.113,Mapped "{[/restart || /restart.json],methods=[POST]}" onto public java.lang.Object org.springframework.cloud.context.restart.RestartMvcEndpoint.invoke()
+11:31:43.114,Mapped "{[/mappings || /mappings.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+11:31:43.115,Mapped "{[/archaius || /archaius.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+11:31:43.117,Mapped "{[/features || /features.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+11:31:43.117,Mapped "{[/env],methods=[POST]}" onto public java.lang.Object org.springframework.cloud.context.environment.EnvironmentManagerMvcEndpoint.value(java.util.Map<java.lang.String, java.lang.String>)
+11:31:43.118,Mapped "{[/env/reset],methods=[POST]}" onto public java.util.Map<java.lang.String, java.lang.Object> org.springframework.cloud.context.environment.EnvironmentManagerMvcEndpoint.reset()
+11:31:43.119,Mapped "{[/metrics/{name:.*}],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.MetricsMvcEndpoint.value(java.lang.String)
+11:31:43.119,Mapped "{[/metrics || /metrics.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+11:31:43.119,Mapped "{[/service-registry/instance-status],methods=[GET]}" onto public org.springframework.http.ResponseEntity org.springframework.cloud.client.serviceregistry.endpoint.ServiceRegistryEndpoint.getStatus()
+11:31:43.119,Mapped "{[/service-registry/instance-status],methods=[POST]}" onto public org.springframework.http.ResponseEntity<?> org.springframework.cloud.client.serviceregistry.endpoint.ServiceRegistryEndpoint.setStatus(java.lang.String)
+11:31:43.120,Mapped "{[/health || /health.json],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.HealthMvcEndpoint.invoke(java.security.Principal)
+11:31:43.120,Mapped "{[/pause || /pause.json],methods=[POST]}" onto public java.lang.Object org.springframework.cloud.endpoint.GenericPostableMvcEndpoint.invoke()
+11:31:43.124,Mapped "{[/env/{name:.*}],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EnvironmentMvcEndpoint.value(java.lang.String)
+11:31:43.124,Mapped "{[/env || /env.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+11:31:43.125,Mapped "{[/beans || /beans.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+11:31:43.125,Mapped "{[/configprops || /configprops.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+11:31:43.126,Mapped "{[/autoconfig || /autoconfig.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+11:31:43.489,No URLs will be polled as dynamic configuration sources.
+11:31:43.490,To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+11:31:43.495,No URLs will be polled as dynamic configuration sources.
+11:31:43.495,To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+11:31:43.618,Registering beans for JMX exposure on startup
+11:31:43.623,Bean with name 'dataSource' has been autodetected for JMX exposure
+11:31:43.634,Bean with name 'environmentManager' has been autodetected for JMX exposure
+11:31:43.637,Bean with name 'configurationPropertiesRebinder' has been autodetected for JMX exposure
+11:31:43.638,Bean with name 'refreshEndpoint' has been autodetected for JMX exposure
+11:31:43.639,Bean with name 'restartEndpoint' has been autodetected for JMX exposure
+11:31:43.640,Bean with name 'serviceRegistryEndpoint' has been autodetected for JMX exposure
+11:31:43.641,Bean with name 'refreshScope' has been autodetected for JMX exposure
+11:31:43.644,Located managed bean 'environmentManager': registering with JMX server as MBean [org.springframework.cloud.context.environment:name=environmentManager,type=EnvironmentManager]
+11:31:43.660,Located managed bean 'restartEndpoint': registering with JMX server as MBean [org.springframework.cloud.context.restart:name=restartEndpoint,type=RestartEndpoint]
+11:31:43.675,Located managed bean 'serviceRegistryEndpoint': registering with JMX server as MBean [org.springframework.cloud.client.serviceregistry.endpoint:name=serviceRegistryEndpoint,type=ServiceRegistryEndpoint]
+11:31:43.684,Located managed bean 'refreshScope': registering with JMX server as MBean [org.springframework.cloud.context.scope.refresh:name=refreshScope,type=RefreshScope]
+11:31:43.695,Located managed bean 'configurationPropertiesRebinder': registering with JMX server as MBean [org.springframework.cloud.context.properties:name=configurationPropertiesRebinder,context=120f38e6,type=ConfigurationPropertiesRebinder]
+11:31:43.700,Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=dataSource,type=DruidDataSource]
+11:31:43.701,Located managed bean 'refreshEndpoint': registering with JMX server as MBean [org.springframework.cloud.endpoint:name=refreshEndpoint,type=RefreshEndpoint]
+11:31:43.702,Registering beans for JMX exposure on startup
+11:31:44.049,Starting beans in phase 0
+11:31:44.059,Setting initial instance status as: STARTING
+11:31:44.105,Initializing Eureka in region us-east-1
+11:31:44.592,Using JSON encoding codec LegacyJacksonJson
+11:31:44.592,Using JSON decoding codec LegacyJacksonJson
+11:31:44.732,Using XML encoding codec XStreamXml
+11:31:44.732,Using XML decoding codec XStreamXml
+11:31:44.960,Resolving eureka endpoints via configuration
+11:31:45.030,Disable delta property : false
+11:31:45.030,Single vip registry refresh property : null
+11:31:45.030,Force full registry fetch : false
+11:31:45.030,Application is null : false
+11:31:45.030,Registered Applications size is zero : true
+11:31:45.031,Application version is -1: true
+11:31:45.031,Getting all instance registry info from the eureka server
+11:31:45.209,The response status is 200
+11:31:45.210,Starting heartbeat executor: renew interval is: 30
+11:31:45.213,InstanceInfoReplicator onDemand update allowed rate per min is 4
+11:31:45.216,Discovery Client initialized at timestamp 1503372705216 with initial instances count: 4
+11:31:45.251,Registering application vortex-cas-server with eureka with status UP
+11:31:45.252,Saw local status change event StatusChangeEvent [timestamp=1503372705252, current=UP, previous=STARTING]
+11:31:45.255,DiscoveryClient_VORTEX-CAS-SERVER/vortex-cas-server:192.168.1.21:7778: registering service...
+11:31:45.261,Located managed bean 'featuresEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=featuresEndpoint]
+11:31:45.270,Located managed bean 'requestMappingEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=requestMappingEndpoint]
+11:31:45.277,Located managed bean 'environmentEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=environmentEndpoint]
+11:31:45.282,Located managed bean 'healthEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=healthEndpoint]
+11:31:45.290,Located managed bean 'beansEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=beansEndpoint]
+11:31:45.294,Located managed bean 'infoEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=infoEndpoint]
+11:31:45.307,Located managed bean 'metricsEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=metricsEndpoint]
+11:31:45.313,Located managed bean 'traceEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=traceEndpoint]
+11:31:45.318,Located managed bean 'dumpEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=dumpEndpoint]
+11:31:45.324,Located managed bean 'autoConfigurationReportEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=autoConfigurationReportEndpoint]
+11:31:45.328,Located managed bean 'configurationPropertiesReportEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=configurationPropertiesReportEndpoint]
+11:31:45.333,Located managed bean 'archaiusEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=archaiusEndpoint]
+11:31:45.368,Initializing ProtocolHandler ["http-nio-7778"]
+11:31:45.382,DiscoveryClient_VORTEX-CAS-SERVER/vortex-cas-server:192.168.1.21:7778 - registration status: 204
+11:31:45.388,Starting ProtocolHandler [http-nio-7778]
+11:31:45.430,Using a shared selector for servlet write/read
+11:31:45.460,Tomcat started on port(s): 7778 (http)
+11:31:45.461,Updating port to 7778
+11:31:45.466,Started CasServerApplication in 13.439 seconds (JVM running for 14.0)
+11:32:43.310,Application shutdown requested.
+11:32:43.310,Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@120f38e6: startup date [Tue Aug 22 11:31:34 CST 2017]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@2e570ded
+11:32:43.315,Unregistering application vortex-cas-server with eureka with status DOWN
+11:32:43.316,Saw local status change event StatusChangeEvent [timestamp=1503372763316, current=DOWN, previous=UP]
+11:32:43.316,Shutting down DiscoveryClient ...
+11:32:43.316,Unregistering ...
+11:32:43.396,DiscoveryClient_VORTEX-CAS-SERVER/vortex-cas-server:192.168.1.21:7778 - deregister  status: 200
+11:32:43.401,Completed shut down of DiscoveryClient
+11:32:43.403,Stopping beans in phase 0
+11:32:43.443,Unregistering JMX-exposed beans on shutdown
+11:32:43.444,Unregistering JMX-exposed beans
+11:32:43.444,Unregistering JMX-exposed beans on shutdown
+11:32:43.445,Unregistering JMX-exposed beans
+11:32:43.449,Closing JPA EntityManagerFactory for persistence unit 'default'
+11:32:43.454,{dataSource-1} closed
+11:32:43.457,Pausing ProtocolHandler ["http-nio-7778"]
+11:32:43.563,Stopping service Tomcat
+11:32:43.613,Stopping ProtocolHandler ["http-nio-7778"]
+11:32:43.622,Destroying ProtocolHandler ["http-nio-7778"]

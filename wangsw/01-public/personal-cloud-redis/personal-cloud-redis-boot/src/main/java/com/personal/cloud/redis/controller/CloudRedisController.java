@@ -52,12 +52,13 @@ public class CloudRedisController {
     @ApiImplicitParams({
             @ApiImplicitParam(name = "key", value = "键", required = true, paramType = "query", dataType = "String"),
     })
-    @RequestMapping(value = "/getRedisString", method = RequestMethod.POST)
+    @RequestMapping(value = "/getRedisString", method = {RequestMethod.POST,RequestMethod.GET})
     public RestResultDto getRedisString(String key) {
         RestResultDto result = new RestResultDto();
         result.setResult(RestResultDto.RESULT_SUCC);
         try {
             String value = cloudRedisService.getString(key);
+            LOG.error("测试",value);
             return RestResultDto.newSuccess(value);
         } catch (Exception e) {
             result.setResult(RestResultDto.RESULT_FAIL);
@@ -91,7 +92,7 @@ public class CloudRedisController {
     @ApiImplicitParams({
             @ApiImplicitParam(name = "key", value = "键", required = true, paramType = "query", dataType = "String"),
     })
-    @RequestMapping(value = "/getRedis", method = RequestMethod.POST)
+    @RequestMapping(value = "/getRedis", method ={RequestMethod.POST,RequestMethod.GET})
     public RestResultDto getRedis(String key) {
         RestResultDto result = new RestResultDto();
         result.setResult(RestResultDto.RESULT_SUCC);

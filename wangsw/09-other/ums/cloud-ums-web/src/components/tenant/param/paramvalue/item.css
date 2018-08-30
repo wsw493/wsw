@@ -1,0 +1,22 @@
+.button{
+	padding: 5px 10px;
+}
+.button Button{
+	margin-right: 5px;
+}
+.operate{
+	font-size:14px;
+	padding: 5px 10px;
+	border-bottom:1px solid #cccccc;
+}
+.operate Input{
+	width:200px;
+}
+
+.editable-row-text {
+  padding: 5px;
+}
+
+.editable-row-operations a {
+  margin-right: 8px;
+}

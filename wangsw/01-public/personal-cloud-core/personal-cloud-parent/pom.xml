@@ -30,7 +30,8 @@
 
         <springboot.version>1.5.9.RELEASE</springboot.version>
         <eureka-server.version>1.4.4.RELEASE</eureka-server.version>
-
+        <eureka-server.version>1.4.4.RELEASE</eureka-server.version>
+        <spring-cloud-zuul-version>1.4.3.RELEASE</spring-cloud-zuul-version>
         <swagger.version>2.8.0</swagger.version>
 
         <!-- 日志 -->
@@ -84,6 +85,11 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-starter-cache</artifactId>
                 <version>${springboot.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-starter-zuul</artifactId>
+                <version>${spring-cloud-zuul-version}</version>
             </dependency>
             <!--  redis -->
             <dependency>

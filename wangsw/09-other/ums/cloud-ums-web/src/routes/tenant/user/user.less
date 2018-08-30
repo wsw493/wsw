@@ -1,0 +1,43 @@
+.main{
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+.table{
+    position: absolute;
+    top:90px;
+    bottom: 0;
+    width: 100%;
+}
+.bt_bar{
+    position: absolute;
+    top:46px;
+    padding: 10px;
+    & > button {
+        margin: 0 8px;
+    }
+}
+.modalmain {
+    :global{
+        .ant-modal-body{
+            position: relative;
+        }
+    }
+}
+.search_bar,.search_bar2{
+    font-size:12px;
+    padding: 10px 50px;
+    border-bottom:1px solid #cccccc;
+    /*box-shadow:rgb(153, 153, 153) 0px 1px 10px -3px;*/
+}
+.search_bar Input{
+    width:15%;
+    margin-right:2%;
+}
+.search_bar Button{
+    float: right;
+    margin:0 5px;
+}
+.button{
+    padding: 5px 10px;
+}
