@@ -1,0 +1,41 @@
+ <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>没有权限</title>
+
+<script type="text/javascript">
+	var ctx = 'http://192.168.1.211:9015';
+</script>
+<script type="text/javascript" src="resources/js/jquery-1.10.0.js"></script>
+<style type="text/css">
+body {
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+}
+.error{margin:0px auto; width:550px; height:150px;position:fixed;left:30%;top:35%;margin-left:width/2;margin-top:height/2;}
+.error-img{ float:left;}
+.error-text{ float:left; margin-top:10px; margin-left:20px;}
+.error-text ul{ padding:0px; margin:0px;}
+.error-text ul li{ list-style:none; line-height:45px;font-family:'微软雅黑'; color:#666;}
+</style>
+<script type="text/javascript">
+	$(document).ready(function (){
+		setTimeout("parent.location.reload();",5000);
+	});
+</script>
+</head>
+<body>
+	<div class="error">
+		<div class="error-img"><img src="resources/image/error1.gif" /></div>
+	    <div class="error-text">
+	    	<ul>
+	        	<li><span style="font-size:60px;color:#ff9600; font-family:Arial, Helvetica, sans-serif">I'm sorry</span></li>
+	            <li><span style="font-size:26px; color:#05a2e4;">很抱歉，您没有权限访问！</span></li>
+	            <span style="font-size:14px; color:#666">请联系管理员确认，5秒钟后自动返回。</span>
+	        </ul>
+	    </div>
+	</div>
+</body>
+</html>

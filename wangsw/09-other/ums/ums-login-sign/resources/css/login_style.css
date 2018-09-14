@@ -1,0 +1,157 @@
+html,body {
+	height: 100%;
+	width: 100%;
+	overflow: hidden;
+	padding: 0;
+	margin: 0;
+}
+.main {
+	width: 100%;
+	height: 100%;
+	background: url(../image/bg.png);
+	font-family: 'Microsoft Yahei', Î¢ÈíÑÅºÚ, arial, ËÎÌå, sans-serif;
+}
+.content {
+	width: 100%;
+	height: 100%;
+}
+.content-small {
+	width: 1000px;
+    height: 100%;
+    margin: auto;
+    position: relative;
+}
+#bg-2 {
+    position: absolute;
+ 			/*bottom: 0;*/
+    top: 50%;
+  		margin-top: -275px;
+}
+.card {
+	background: url(../image/login-bg.png);
+	background-repeat: no-repeat;
+	height: 425px;
+    width: 303px;
+    position: absolute;
+    left: 50%;
+    margin-left: -151px;
+    /*bottom: 134px;*/
+       top: 50%;
+  		margin-top: -256px;
+    padding-top: 40px;
+    box-sizing: border-box;
+}
+.title-logo {
+	margin: auto;
+	display: block;
+}
+.input-box {
+	width: 230px;
+	margin: auto;
+	margin-top: 10px;
+	position: relative;
+}
+.input-style-1 {
+	width: 100%;
+    padding: 3px 25px;
+ 			box-sizing: border-box;
+    font-family: 'Microsoft Yahei';
+}
+.height-30 {
+	height: 35px;
+	line-height: 35px;
+	border: 1px solid #888;
+	border-radius: 3px;
+}
+.input-box-icon {
+	position: absolute;
+	top: 50%;
+	margin-top: -11px;
+	left: 3px;
+}
+.input-style-2 {
+	height: 35px;
+	width: 64%;
+	display: inline-block;
+	vertical-align: top;
+	padding: 3px;
+  		box-sizing: border-box;
+    font-family: 'Microsoft Yahei';
+}
+.check-code {
+	position: absolute;
+  		right: 0;
+	height: 35px;
+	width: 33%;
+	display: inline-block;
+	vertical-align: top;
+	background-color: #787E78;
+}
+button {
+    width: 100%;
+    height: 35px;
+    border: none;
+    background-color: rgb(10,117,185);
+    color: #fff;
+    font-size: 16px;
+    /*font-weight: bold;*/
+    cursor: pointer;
+    border-radius: 3px;
+}
+button:hover {
+	background-color: rgb(35,135,205);
+}
+button span {
+  		font-family: 'Microsoft Yahei';
+  		text-shadow: rgba(0,0,0,0.6) 1px 1px 1px;
+}
+.width-50 {
+    width: 48%;
+    display: inline-block;
+    vertical-align: top;
+    padding: 0;
+    margin: 0;
+    font-size: 13px;
+       color: rgb(115,115,115);	
+       white-space: nowrap;
+  		overflow: hidden;
+}
+.footer {
+    position: fixed;
+    bottom: 0;
+    text-align: center;
+    display: block;
+    width: 100%;
+    height: 50px;
+    color: #fff;
+}
+.error {
+	border-color: #f00;
+}
+.errorMsg {
+    position: absolute;
+    top: 6px;
+    white-space: nowrap;
+    color: #f00;
+    font-size: 14px;
+    display: none;
+}
+.showErrorMsg {
+	display: block;
+}
+input[type='checkbox'] {
+	margin: 0;
+    vertical-align: middle;
+}
+
+.loginErrMsg {
+    position: absolute;
+    font-size: 12px;
+    background: #e25d5d;
+    margin-top: 3px;
+    display: none;
+    width: 230px;
+    margin-top: 3px;
+    margin-left: 36.5px;
+    padding-left: 3px;
+}

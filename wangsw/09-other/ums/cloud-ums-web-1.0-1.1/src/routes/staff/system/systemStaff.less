@@ -1,0 +1,96 @@
+.main{
+    height: 100%;
+    width: 100%;
+    position: relative;
+    .leftTree {
+        display: inline-block;
+        vertical-align: top;
+        width: 20%;
+        height: 100%;
+        overflow-y: auto;
+        border-right: 1px solid #ddd;
+    }
+    .rigthCont {
+        display: inline-block;
+        vertical-align: top;
+        width: 79%;
+        height: 100%;
+        position: relative;
+    }
+}
+.table{
+    position: absolute;
+    top:90px;
+    bottom: 0;
+    width: 100%;
+}
+.bt_bar{
+    position: absolute;
+    top:46px;
+    padding: 10px;
+    & > button {
+        margin: 0 8px;
+    }
+}
+.modalmain {
+    :global{
+        .ant-modal-body{
+            position: relative;
+        }
+    }
+}
+.search_bar,.search_bar2{
+    font-size:12px;
+    padding: 10px 50px;
+    border-bottom:1px solid #cccccc;
+    /*box-shadow:rgb(153, 153, 153) 0px 1px 10px -3px;*/
+}
+.search_bar Input{
+    width:15%;
+    margin-right:2%;
+}
+.search_bar Button{
+    float: right;
+    margin:0 5px;
+}
+.button{
+	border: 1px solid #aaa;
+    display: inline-block;
+    padding: 5px 7px;
+    color: #555;
+    border-radius: 4px;
+}
+.button:hover{
+	border: 1px solid #108ee9;
+	color: #108ee9;
+}
+.commonBtn {
+	display: inline-block;
+	padding: 4px 15px 5px;
+    font-size: 14px;
+    border-radius: 4px;
+    color: #fff;
+    background-color: #108ee9;
+    border: 1px solid #108ee9;
+    outline: 0;
+    text-align: center;
+    line-height: 1.5;
+    margin-right: 8px;
+}
+
+.commonBtn:hover {
+	background-color: #59aae4;
+	color: #fff;
+}
+.fileButton{
+	width: 140px;
+	cursor: pointer;
+	padding: 2px 6px;
+	border-radius: 5px;
+	border: 1px solid #ccc;
+	outline: none;
+}
+.fileButton:hover{
+	background-color: #007dc4;
+	color: #ffffff;
+}

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>management</title>
+	<!--reactcss-->
+	<link rel="stylesheet" href="index.css" />
+	<!--地图默认样式css-->
+	<link rel="stylesheet" href="./resources/css/vortexBMap.css" />
+	<link href="./resources/css/specialBtnStyle.css" rel="stylesheet" type="text/css" />
+	<!-- <link rel="stylesheet" href="http://api.map.baidu.com/library/TrafficControl/1.4/src/TrafficControl_min.css" /> -->
+	<script type="text/javascript">
+	window.addEventListener('message',function(e){   
+		if(typeof(e.data)=='string' && e.data.indexOf('ACCESS-TOKEN')>-1 && e.data.indexOf('ACCESS-TOKEN-GETTIME')>-1){
+			var tempArr = e.data.split("ACCESS-TOKEN-GETTIME");
+			localStorage.setItem("ACCESS-TOKEN",tempArr[0].substring('ACCESS-TOKEN'.length,tempArr[0].length));
+			localStorage.setItem("ACCESS-TOKEN-GETTIME",tempArr[1]);
+		}
+	},false);
+	if (typeof String.prototype.startsWith != 'function') {
+		String.prototype.startsWith = function (prefix){
+			return this.slice(0, prefix.length) === prefix;
+		};
+	}
+
+	function getToken() {
+		var t = ''
+		var args = window.location.hash.split('?');
+		args = args[1].split('&');
+		args.map((item)=>{
+			if(item.indexOf('token')>-1){
+				t = item.split('=')[1];
+			}
+		});
+		return t;
+	}
+	var token = getToken();
+
+	var localIP = 'unknown';
+	function getLocalIPAddress() {
+		if(navigator.userAgent.indexOf('MSIE') > -1 || navigator.userAgent.indexOf('Trident') > -1){
+			var oSetting = null; 
+			var ip = null; 
+			try{ 
+				oSetting = new ActiveXObject("rcbdyctl.Setting"); 
+				ip = oSetting.GetIPAddress; 
+				if (ip.length == 0){
+						return "没有连接到Internet"; 
+				} oSetting = null; }
+			catch(e){ 
+				localIP=  ip; 
+			} 
+			localIP = ip; 
+		}else {
+			var myPeerConnection = window.RTCPeerConnection || window.mozRTCPeerConnection || window.webkitRTCPeerConnection; //compatibility for firefox and chrome
+			var pc = new myPeerConnection({iceServers: []}), // 空的ICE服务器（STUN或者TURN）
+				noop = function() {},
+				localIPs = {}, //记录有没有被调用到onNewIP这个listener上
+				ipRegex = /([0-9]{1,3}(\.[0-9]{1,3}){3}|[a-f0-9]{1,4}(:[a-f0-9]{1,4}){7})/g,
+				key;
+			
+			function ipIterate(ip) {
+				if (!localIPs[ip]){
+					localIP = ip;
+				}
+				localIPs[ip] = true;
+			}
+			pc.createDataChannel(""); //create a bogus data channel
+			pc.createOffer().then(function(sdp) {
+				sdp.sdp.split('\n').forEach(function(line) {
+				if (line.indexOf('candidate') < 0) return;
+				line.match(ipRegex).forEach(ipIterate);
+				});
+				pc.setLocalDescription(sdp, noop, noop);
+			}); // create offer and set local description
+			pc.onicecandidate = function(ice) { //listen for candidate events
+				if (!ice || !ice.candidate || !ice.candidate.candidate || !ice.candidate.candidate.match(ipRegex)) return;
+				ice.candidate.candidate.match(ipRegex).forEach(ipIterate);
+			};
+		}
+	}
+	getLocalIPAddress();
+	var MapType = {
+	    Default: 0,
+	    AMap: 1,
+	    BMap: 2
+	};
+	</script>
+</head>
+<body class="specialBtn">
+<div id="root" class='root'></div>
+<!--reactjs 在地图加载完后加载,mapOnload中可以看见 -->
+<script src="./resources/js/require.js" data-main="./resources/js/main.js"></script>
+<!-- <script src="index.js"></script> -->
+</body>
+</html>

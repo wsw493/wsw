@@ -1,0 +1,184 @@
+.block-content .row {
+	margin-left: 0;
+	margin-right: 0;
+}
+
+.block-content .row .input-box {
+	margin-bottom: 15px;
+	position: relative;
+}
+
+.block-content .row .input-box label {
+	display: block;
+    text-align: left;
+}
+
+.block-content .row .input-box input {
+    display: block;
+    width: 100%;
+    height: 32px;
+    border: none;
+    border-bottom: 1px solid #aaa;
+}
+
+.block-content .row .input-box input:focus {
+	border-bottom: 1px solid #3e4a59;
+}
+
+.block-content .row .input-box button {
+	display: block;
+	border: none;
+	height: 32px;
+	width: 100%;
+	margin-bottom: 15px;
+	border-radius: 3px;
+}
+
+.confirmChange {
+	margin-top: 30px;
+	background-color: #5BB1F4;
+	color: #fff; 
+}
+.confirmChange:hover {
+	background-color:#017cdb;
+}
+
+.resetChange {
+	margin-bottom: 30px !important;
+	background-color: rgb(245, 144, 84);
+	color: #fff;
+}
+.resetChange:hover {
+	background-color: rgb(255,101,8);
+}
+
+.input-error {
+	border-bottom: 1px solid #f00 !important;
+    box-shadow: #f00 0px 4px 2px -4px;
+}
+
+.resultMsg {
+	text-align: left;
+	font-family: "Microsoft YaHei";
+	font-weight: bold;
+}
+
+.errorTxt{
+	color: #f00;
+	position: absolute;
+    right: 20px;
+    bottom: 5px;
+}
+/* .cover-page {
+	position:fixed;
+	top:0;
+	left:0;
+	z-index:1000;
+	background-color:rgba(0,0,0,0.7);
+	height:100%;
+	width:100%;
+	display: none;
+}
+
+.cover-page .cover-panel {
+	position:relative;
+	top:100px;
+	width:400px;
+	height:500px;
+	background:#fff;
+	border:1px solid #d4d4d4;
+	border-radius:10px;
+	margin:auto;
+	padding:20px 0;
+	box-sizing:border-box;
+}
+
+.cover-page .cover-panel .input-box {
+	margin: 20px auto;
+	width : 300px;
+	font-family: 'Microsoft Yahei',verdana;
+    color: #666;
+}
+
+.cover-page .cover-panel .input-box label {
+	display: block;
+	width: 30%;
+}
+
+.cover-page .cover-panel .input-box input {
+	display:block;
+	width: 100%;
+	height: 40px;
+    border-radius: 5px;
+    outline: none;
+    border: 1px solid #d4d4d4;
+    padding:3px 5px;
+    box-sizing: border-box;
+    margin-top: 5px;
+}
+
+.cover-page .cover-panel .input-box input:focus {
+	border: 2px solid #5BB1F4;
+}
+
+.cover-page .cover-panel .input-box button {
+	display: block;
+	margin: 5px auto;
+	height: 45px;
+	width:100%;
+	border: 1px solid #d4d4d4;
+	outline: none;
+	border-radius: 5px;
+	font-size: 20px;
+	cursor: pointer;
+}
+
+.cover-page .cover-panel .confirmChange {
+	background-color: #5BB1F4;
+	color: #fff;
+}
+
+.cover-page .cover-panel .confirmChange:hover {
+	background-color:#017cdb;
+}
+
+.cover-page .cover-panel .resetChange {
+	background-color: rgb(245, 144, 84);
+	color: #fff;
+}
+
+.cover-page .cover-panel .resetChange:hover {
+	background-color: rgb(255,101,8);
+}
+
+.cover-page .cover-panel .closeBtn {
+	position: absolute;
+	top: -15px;
+    right: -15px;
+    width: 30px;
+    height: 30px;
+    line-height: 20px;
+    border: 2px solid #fff;
+    border-radius: 15px;
+	background-color: #000;
+	color: #fff;
+	font-size: 30px;
+	text-align:center;
+	cursor: pointer;
+	font-weight: 100;
+	box-sizing: border-box;
+}
+
+.cover-page .cover-panel .closeBtn:hover {
+	background-color: #000;
+	color: #fff;
+	font-weight: 900;
+}
+
+.resultMsg {
+	font-weight: bold;
+}
+
+label.error{
+	color: #f00;
+} */

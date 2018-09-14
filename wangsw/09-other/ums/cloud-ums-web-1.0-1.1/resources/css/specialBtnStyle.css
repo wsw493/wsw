@@ -1,0 +1,88 @@
+/*所有按钮改为蓝色*/
+.specialBtn .ant-btn.primary{
+  background-color: #1890ff;
+  color: #fff;
+  border-color: #1890ff;
+}
+/*所有按钮的hover效果改为淡蓝色*/
+.specialBtn .ant-btn.primary:hover{
+  color: #fff;
+  background-color: #49a9ee;
+  border-color: #49a9ee;
+}
+/*所有删除按钮改为红色*/
+.specialBtn .ant-btn.delete{
+  background-color: #F5222D;
+  color: #fff;
+  border-color: #F5222D;
+}
+/*所有删除按钮的hover效果改为淡红色*/
+.specialBtn .ant-btn.delete:hover{
+  color: #fff;
+  background-color: #ff4d4f;
+  border-color: #ff4d4f;
+}
+/*所有查看按钮改为绿色*/
+.specialBtn .ant-btn.view{
+  background-color: #52C41A;
+  color: #fff;
+  border-color: #52C41A;
+}
+/*所有查看按钮的hover效果改为淡绿色*/
+.specialBtn .ant-btn.view:hover{
+  color: #fff;
+  background-color: #73d13d;
+  border-color: #73d13d;
+}
+/*重置vtxDataGrid翻页样式*/
+.specialBtn .ant-table-wrapper .ant-spin-nested-loading .ant-spin-container .ant-table-pagination{
+  display: block;
+  width: 100%;
+  text-align: right;
+  right: 0;
+  margin: 0;
+  padding: 16px 20px 16px 0;
+  background-color: #F7F7F7;
+}
+/*重置默认table翻页样式*/
+.specialBtn .ant-table-pagination.ant-pagination{
+  width: 100%;
+  background-color: #F7F7F7;
+  margin: 0;
+  padding: 16px 20px 16px 0;
+  text-align: right;
+}
+/*修复每页条数右对齐的问题*/
+.specialBtn .ant-select-dropdown-menu-item{
+  text-align: left;
+}
+/*dataGrid各行变色修改*/
+.specialBtn .ant-table-tbody>.ant-table-row:nth-child(even){
+  background: #fafafa;
+}
+/*icon增量更新*/
+@font-face {
+  font-family: "iconfont";
+  src: url('../iconfont/iconfont.eot?t=1527680498756'); /* IE9*/
+  src: url('../iconfont/iconfont.eot?t=1527680498756#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('data:application/x-font-woff;charset=utf-8;base64,d09GRgABAAAAAAlAAAsAAAAADTAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAABHU1VCAAABCAAAADMAAABCsP6z7U9TLzIAAAE8AAAAQwAAAFZW71IrY21hcAAAAYAAAACEAAAB6OJZBuRnbHlmAAACBAAABPsAAAZUKCorlmhlYWQAAAcAAAAALwAAADYSd6HgaGhlYQAABzAAAAAdAAAAJAjNBYtobXR4AAAHUAAAABUAAAAoKekAAGxvY2EAAAdoAAAAFgAAABYI1AcYbWF4cAAAB4AAAAAdAAAAIAEaAHZuYW1lAAAHoAAAAUUAAAJtPlT+fXBvc3QAAAjoAAAAVgAAAG9j5CvSeJxjYGRgYOBikGPQYWB0cfMJYeBgYGGAAJAMY05meiJQDMoDyrGAaQ4gZoOIAgCKIwNPAHicY2BkMWScwMDKwMHUyXSGgYGhH0IzvmYwYuRgYGBiYGVmwAoC0lxTGBwYKj5wMDf8b2CIYW5gaAQKM4LkAOSFC7kAeJzFkcsNwzAMQyn/4gQZpRN0oJ4ygA8dmhuklOVLJ4iAZ1qUABsSgAogi5cogF0weHzk2vQzjukXvJU3qSFhsN+38kGbqhbV2tQdHZvuVb1ZvbCGx8Kee/o/znl+V7aLsdAXuXCfKdAUwRxonmAJfMqsge+PLfD9cQt8p+wB0g/o/hoPeJxtVF1sFFUUvufe2ZndnZ3ZnTu/u9vubzvT0rKU3e2OldrWBIgiCv4SEkOohvIXDSixBlQqYgIqv4nig38Qg0ENUWJiIBAb9cUHI4ny5oN/DyaG4AP4Qnf03G7RFyczZ+89e87Md77vnEtihPz9M7vIPGKSPrKULCdrCQF5ACo67YZy0KzRAbDLMdu1dBZUg7JSrdTYHeBWZMupt5q+KytyGnQoQKNcbwU1GsBwc4wug7rTDZDN5x7kvV2cHYWkFxRejlbRU2AXq13pscXR3YPjVr1kxqdTnGc5fy0ux2JxSqW0Dk+4TiKWSMrR+7F0zr5Y7KdFSGWD3Or1WinPJw80n+zudRMAMzNg5kv6B+NGzsD7uZxj8qyS0eJeTqv2WDD9m+qZqW7/V4IXxVoPS9fYTqKSRYTEyhW/2ULUjiWDUw/BEBWFBoi6AvCrga/ItqyAbEnfz61T02mVnUml03OH414c7tdcDWBtws3Eo32UMlVlEkQvJXdmnAzetKEosKa9Uc1kVPpe9KmSdpLwPKOSBEBFnNPBc4T9yXaQfnIvIb1lQZmF3OtgOctgDMLhGgTlEFmupAF5dooL2Jq+UvZl2yjAMiRepGCgMSYkcFxDh4ofwBn4hrsuv2F4nnFjeAWlK5vRyJZUtqR9LLM4S36ilbIpeCVvt/ucLuiyr4rAq+E9FFaP0Cut1RTcqgtf2MaJjAN2yYGJpSeWTtCNatFJvivJqVzypOqUVPqO4QA4RltOu52wIXqzMTFRjy5nbDuzwDshbA+9SVLEwzo7WDtIoVyDZissiyoosfIA+T5hIGxvs/J5i76BNgYLC0s4YdVCTF++w+FeibAZ1HRoXlPsS9GJTR8aBXCNXh89LjguKtxohdAh00AMVRHKfpkbxfZLsa81g889fn3/WRZFCY8nocSYrMpMYlBOcC/xI/327euaYSznHjeynB2IndsfvXkjbnqJ6BqlqCoFI+nxxGVY/tYPCkYRMVtfsUNsDOvOEIsUSYMQ91bLVbH9TFcJQDw6pCFEwWEJtOpF1FSZd8n+uGiDXZpKf1c1TW17Sf3MVGUKzqOJ1jIZyi9IKQZ/TVV0X5/SQYuSipM4ZZrSIpZSepO6buk67BMpF0TKGqZKL1aoPJ+ipTelfR0zUmwwxs3TCUdZ0GqWIVCyhBATBwIBFEQvhFUkTQecCcuJVWQFl+hoBIrgGYNaw03/MzXDek5ufeaj7O2PbViZ/e743i/7Kaen/3WPTP7nhitacsMuSg/vmJx89Ryjh56SZJ1/+H9OIiOXs4jrTpyVUXIXeYhsIFsJ6cfGHzY6lLqsAAjXxCMLudWpbVgF2mmFWNDyA19AdgsQumKIemt0DHkWPlOEVDudg4X4QVXHfrHF3m3gvko3RtM9jUYPfaCnjtPL8xzAHQgL7bPF1oDrDrSKcFDjHFbtGTRHRo+Fw/JQ4+j47mTOjH5asoIvWvdwM1Eyayt1zvWICDvL8Zo3YjfDTZNDXbwfvxJNaxwn42AhFO8WXxEr3sUTu8ePNobk4fDY6Ig5uCdh5p6G2x5dU83et77CTZjleROjZqFYBPHMzOMslgib13QGfzSSJd14vqNgDp4nyEkrbIUoZEfBGpiKG8Ll7a9r8We3bD1bLjwy2QiPXJKkS0fm7ZbahcV0lh7Ytv2Uxzdv2vz5oD1x6z+07T9q5xeTfwBR6iFNAHicY2BkYGAA4rDtNw7G89t8ZeBmYQCB6ybrPiHo//Us75kbgFwOBiaQKABkPgyrAHicY2BkYGBu+N/AEMPGAAIs7xkYGVABFwBZAQNkAAAAeJxjYWBgYH7JwMAGpFnwYAAjjwETAAAAAAAAAAB2AL4BMgFgAa4CCAJUAvIDKgAAeJxjYGRgYOBiyGJgYwABJjCPC0j+B/MZABQ8AZEAAAB4nGWPTU7DMBCFX/oHpBKqqGCH5AViASj9EatuWFRq911036ZOmyqJI8et1ANwHo7ACTgC3IA78EgnmzaWx9+8eWNPANzgBx6O3y33kT1cMjtyDRe4F65TfxBukF+Em2jjVbhF/U3YxzOmwm10YXmD17hi9oR3YQ8dfAjXcI1P4Tr1L+EG+Vu4iTv8CrfQ8erCPuZeV7iNRy/2x1YvnF6p5UHFockikzm/gple75KFrdLqnGtbxCZTg6BfSVOdaVvdU+zXQ+ciFVmTqgmrOkmMyq3Z6tAFG+fyUa8XiR6EJuVYY/62xgKOcQWFJQ6MMUIYZIjK6Og7VWb0r7FDwl57Vj3N53RbFNT/c4UBAvTPXFO6stJ5Ok+BPV8bUnV0K27LnpQ0kV7NSRKyQl7WtlRC6gE2ZVeOEXpc0Yk/KGdI/wAJWm7IAAAAeJxtyEsKgCAUBdB3zcxsLS1K9EmCZaj02X1B087wkKCPoX8GAh0keigM0BhhMBEuxdeeS1OFU7Zeh5h4tt6ryoldkyGXVdZ7c/KIfL5ri1uIHjwnEzgAAA==') format('woff'),
+  url('../iconfont/iconfont.ttf?t=1527680498756') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+  url('../iconfont/iconfont.svg?t=1527680498756#iconfont') format('svg'); /* iOS 4.1- */
+}
+
+/*导出*/
+.specialBtn .anticon-export:before { content: "\f008";font-family:"iconfont" !important; }
+/*撤回*/
+.specialBtn .anticon-reload:before { content: "\f007";font-family:"iconfont" !important; }
+/*新增*/
+.specialBtn .anticon-file-add:before { content: "\f006";font-family:"iconfont" !important; }
+/*导入*/
+.specialBtn .anticon-select:before { content: "\f005";font-family:"iconfont" !important; }
+/*修改*/
+.specialBtn .anticon-form:before { content: "\f004";font-family:"iconfont" !important; }
+/*同步*/
+.specialBtn .anticon-sync:before { content: "\f003";font-family:"iconfont" !important; }
+/*详情*/
+.specialBtn .anticon-file-text:before { content: "\f002";font-family:"iconfont" !important; }
+/*查询*/
+.specialBtn .anticon-search:before { content: "\f001";font-family:"iconfont" !important; }
